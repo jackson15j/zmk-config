@@ -11,9 +11,8 @@
 // TODO: Add Mac, Colemak, Gaming layers from QMK keymap.
 // TODO: Add Combos from QMK keymap.
 #define NAV_L 1
-#define OTHER_L 2
-#define NUM_L 3
-#define SYM_L 4
+#define NUM_L 2
+#define SYM_L 3
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -48,15 +47,6 @@
                 &trans   &trans   &trans   &trans  &trans       &kp HOME    &kp LARW       &kp DARW      &kp RARW   &kp END
                 &trans   &trans   &trans   &trans  &trans       &kp C_MUTE  &kp C_VOL_DN   &kp C_VOL_UP  &kp INS    &kp PSCRN
                                            &trans  &trans       &trans      &trans
-            >;
-        };
-
-        other_layer {
-            bindings = <
-                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans      &trans     &trans
-                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans      &trans     &trans
-                &trans     &trans     &trans      &trans          &trans       &trans           &kp HOME       &trans      &trans     &trans
-                                                  &trans          &trans       &trans           &trans
             >;
         };
 
