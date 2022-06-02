@@ -2,6 +2,9 @@
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
+ *
+ * To build on my laptop:
+ * ~/github_forks/zmk/app $ west build -p -d build/ferris --board ferris_rev02 -- -DZMK_CONFIG=$HOME/github_repos/zmk-config/config/ && west flash -d build/ferris
  */
 
 #include <behaviors.dtsi>
