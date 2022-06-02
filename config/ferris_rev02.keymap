@@ -11,9 +11,10 @@
 // TODO: Add Mac, Colemak, Gaming layers from QMK keymap.
 // TODO: Add Combos from QMK keymap.
 #define DEFAULT 0
-#define NAV_L 1
-#define NUM_L 2
-#define SYM_L 3
+#define COLEMAK_L 1  // Colemak Mod-DH: https://colemakmods.github.io/mod-dh/
+#define NAV_L 2
+#define NUM_L 3
+#define SYM_L 4
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -42,12 +43,21 @@
             >;
         };
 
+        colemak_layer {
+            bindings = <
+                &kp Q      &kp W      &kp F       &kp P           &kp B               &kp J            &kp L          &kp U       &kp Y       &kp SEMI
+                &hm LGUI A &hm LSHFT R &hm LALT S &hm LCTRL T     &hm RALT D          &hm RALT H       &hm RCTRL N    &hm LALT E  &hm RSHFT I &hm LGUI O
+                &kp Z      &kp X      &kp C       &kp V           &kp B               &kp K            &kp M          &kp COMMA   &kp DOT     &kp FSLH
+                                                  &mt LSHFT BSPC  &lt SYM_L SPACE     &lt NUM_L SPACE  &lt NAV_L ENTER
+            >;
+        };
+
         nav_layer {
             bindings = <
-                &trans   &trans   &trans   &trans  &trans       &trans      &kp PG_UP      &kp UP        &kp PG_DN  &kp DEL
-                &trans   &trans   &trans   &trans  &trans       &kp HOME    &kp LEFT       &kp DOWN      &kp RIGHT  &kp END
-                &trans   &trans   &trans   &trans  &trans       &kp C_MUTE  &kp C_VOL_DN   &kp C_VOL_UP  &kp INS    &kp PSCRN
-                                           &trans  &trans       &trans      &trans
+                &trans   &trans   &trans           &trans        &trans       &trans      &kp PG_UP      &kp UP        &kp PG_DN  &kp DEL
+                &trans   &trans   &trans           &trans        &trans       &kp HOME    &kp LEFT       &kp DOWN      &kp RIGHT  &kp END
+                &trans   &trans   &tog COLEMAK_L   &tog DEFAULT  &trans       &kp C_MUTE  &kp C_VOL_DN   &kp C_VOL_UP  &kp INS    &kp PSCRN
+                                                   &trans        &trans       &trans      &trans
             >;
         };
 
