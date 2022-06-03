@@ -1,3 +1,6 @@
+// Local Variables:
+// compile-command: "cd ~/github_forks/zmk/; source .venv/bin/activate; cd app/; west build -p -d build/34 --board ferris_rev02 -- -DZMK_CONFIG=$HOME/github_repos/zmk-config/keymaps/"
+// End:
 /*
  * Shared 34 key keymap.
  *
