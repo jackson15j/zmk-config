@@ -18,9 +18,10 @@
 
 #define DEFAULT 0
 #define COLEMAK_L 1  // Colemak Mod-DH: https://colemakmods.github.io/mod-dh/
-#define NAV_L 2
-#define NUM_L 3
-#define SYM_L 4
+#define GAME_L 2
+#define NAV_L 3
+#define NUM_L 4
+#define SYM_L 5
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -89,11 +90,20 @@
             >;
         };
 
+        game_layer {
+            bindings = <
+                &kp Q  &kp W  &kp E  &kp R  &kp T          &trans      &kp PG_UP      &kp UP        &kp PG_DN  &kp DEL
+                &kp A  &kp S  &kp D  &kp F  &kp G          &kp HOME    &kp LEFT       &kp DOWN      &kp RIGHT  &kp END
+                &kp Z  &kp X  &kp C  &kp V  &kp B          &kp C_MUTE  &kp C_VOL_DN   &kp C_VOL_UP  &kp INS    &kp PSCRNSLH
+                       &kp LCTRL  &lt NUM_L SPACE          &trans      &trans
+            >;
+        };
+
         nav_layer {
             bindings = <
                 &trans   &trans   &trans           &trans        &trans       &trans      &kp PG_UP      &kp UP        &kp PG_DN  &kp DEL
                 &trans   &trans   &trans           &trans        &trans       &kp HOME    &kp LEFT       &kp DOWN      &kp RIGHT  &kp END
-                &trans   &trans   &to COLEMAK_L    &to DEFAULT   &trans       &kp C_MUTE  &kp C_VOL_DN   &kp C_VOL_UP  &kp INS    &kp PSCRN
+                &trans   &trans   &to COLEMAK_L    &to DEFAULT   &GAME_L      &kp C_MUTE  &kp C_VOL_DN   &kp C_VOL_UP  &kp INS    &kp PSCRN
                                                    &trans        &trans       &trans      &trans
             >;
         };
