@@ -101,10 +101,10 @@
 
     nav_layer {
       bindings = <
-        &trans  &trans  &trans         &trans       &trans         &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
-        &trans  &trans  &trans         &trans       &trans         &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
-        &trans  &trans  &to COLEMAK_L  &to DEFAULT  &GAME_L        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
-                                       &trans       &trans         &trans      &trans
+        &trans  &trans  &trans         &trans       &trans            &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
+        &trans  &trans  &trans         &trans       &trans            &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
+        &trans  &trans  &to COLEMAK_L  &to DEFAULT  &to GAME_L        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
+                                       &trans       &trans            &trans      &trans
         >;
     };
 
