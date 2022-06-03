@@ -1,5 +1,5 @@
 // Local Variables:
-// compile-command: "cd ~/github_forks/zmk/; source .venv/bin/activate; cd app/; west build -p -d build/34 --board ferris_rev02 -- -DZMK_CONFIG=$HOME/github_repos/zmk-config/keymaps/"
+// compile-command: "cd ~/github_forks/zmk/; source .venv/bin/activate; cd app/; west build -p -d build/34 --board ferris_rev02 -- -DZMK_CONFIG=$HOME/github_repos/zmk-config/config/"
 // End:
 /*
  * Shared 34 key keymap.
@@ -94,7 +94,7 @@
       bindings = <
         &kp Q  &kp W  &kp E  &kp R  &kp T          &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
         &kp A  &kp S  &kp D  &kp F  &kp G          &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
-        &kp Z  &kp X  &kp C  &kp V  &kp B          &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRNSLH
+        &kp Z  &kp X  &kp C  &kp V  &kp B          &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
                &kp LCTRL  &lt NUM_L SPACE          &trans      &trans
         >;
     };
