@@ -1,0 +1,11 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ *
+ * To build on my laptop:
+ * ~/github_forks/zmk/app $ west build -p -d build/cradio --board cradio_rev02 -- -DZMK_CONFIG=$HOME/github_repos/zmk-config/config/ && west flash -d build/cradio
+ *
+ */
+
+#include "../keymaps/34.h"

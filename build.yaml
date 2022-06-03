@@ -14,3 +14,7 @@
 ---
 include:
   - board: ferris_rev02
+  - board: nice_nano_v2
+    shield: cradio_left  # Sweep
+  - board: nice_nano_v2
+    shield: cradio_right  # Sweep
