@@ -1,0 +1,15 @@
+// Local Variables:
+// compile-command: "cd ~/github_forks/zmk/; source .venv/bin/activate; cd app/; west build -p -d build/cradio/left/ --board nice_nano -- -DSHIELD=cradio_left -DZMK_CONFIG=$HOME/github_repos/zmk-config/config/ && west build -p -d build/cradio/right/ --board nice_nano -- -DSHIELD=cradio_right -DZMK_CONFIG=$HOME/github_repos/zmk-config/config/"
+// End:
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ *
+ * To build on my laptop:
+ * ~/github_forks/zmk/app $ west build -p -d build/cradio/left/ --board nice_nano -- -DSHIELD=cradio_left -DZMK_CONFIG=$HOME/github_repos/zmk-config/config/ && west flash -d build/cradio/left/
+ * ~/github_forks/zmk/app $ west build -p -d build/cradio/right/ --board nice_nano -- -DSHIELD=cradio_right -DZMK_CONFIG=$HOME/github_repos/zmk-config/config/ && west flash -d build/cradio/right/
+ *
+ */
+
+#include "../keymaps/34.h"
