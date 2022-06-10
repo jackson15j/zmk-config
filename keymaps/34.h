@@ -30,6 +30,11 @@
 / {  // https://zmk.dev/docs/features/combos
   combos {
     compatible = "zmk,combos";
+    combo_zmk_layer {
+      timeout-ms = <200>;
+      key-positions = <0 20>;
+      bindings = <&tog ZMK_L>;
+    };
     combo_esc {
       timeout-ms = <50>;
       key-positions = <0 1>;
