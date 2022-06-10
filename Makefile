@@ -22,3 +22,4 @@ build_cradio: ;
 	west build -p -d build/cradio/right/ --board nice_nano -- -DSHIELD=cradio_right -DZMK_CONFIG=$(ZMK_CONFIG_PATH)
 
 build_all: build_ferris build_cradio
+build_all_34: build_ferris build_cradio
