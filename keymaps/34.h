@@ -22,6 +22,7 @@
 #define NAV_L 3
 #define NUM_L 4
 #define SYM_L 5
+#define ZMK_L 6
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -125,5 +126,15 @@
                                         &trans           &trans           &trans           &trans
         >;
     };
+
+    zmk_layer {
+      bindings = <
+        &bt BT_PRV    &bt BT_NXT    &bt BT_CLR    &bt BT_PRV    &bt BT_NXT          &bt BT_PRV    &bt BT_NXT    &bt BT_CLR    &bt BT_PRV    &bt BT_NXT
+        &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5        &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5
+        &trans        &trans        &trans        &trans        &trans              &trans        &trans        &trans        &trans        &trans
+                                                  &trans        &trans              &trans        &trans
+        >;
+    };
+
   };
 };
