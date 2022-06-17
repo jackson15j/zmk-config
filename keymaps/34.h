@@ -15,6 +15,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
 
 #define DEFAULT 0
 #define COLEMAK_L 1  // Colemak Mod-DH: https://colemakmods.github.io/mod-dh/
@@ -127,9 +129,11 @@
         >;
     };
 
-    zmk_layer {  // https://zmk.dev/docs/behaviors/bluetooth
+    zmk_layer {
+      // https://zmk.dev/docs/behaviors/bluetooth
+      // https://zmk.dev/docs/behaviors/outputs
       bindings = <
-        &bt BT_CLR    &trans        &trans        &trans        &trans              &trans        &trans        &trans        &trans        &bt BT_CLR
+        &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &trans        &trans              &trans        &trans        &out OUT_USB  &out OUT_BLE  &bt BT_CLR
         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
         &trans        &trans        &trans        &trans        &trans              &trans        &trans        &trans        &trans        &trans
                                                   &trans        &trans              &trans        &trans
