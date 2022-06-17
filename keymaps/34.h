@@ -15,6 +15,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
 
 #define DEFAULT 0
 #define COLEMAK_L 1  // Colemak Mod-DH: https://colemakmods.github.io/mod-dh/
@@ -22,6 +24,7 @@
 #define NAV_L 3
 #define NUM_L 4
 #define SYM_L 5
+#define ZMK_L 6
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -76,7 +79,7 @@
       bindings = <
         &kp Q       &kp W        &kp E       &kp R        &kp T               &kp Y       &kp U        &kp I       &kp O        &kp P
         &hm LGUI A  &hm LSHFT S  &hm LALT D  &hm LCTRL F  &hm RALT G          &hm RALT H  &hm RCTRL J  &hm LALT K  &hm RSHFT L  &hm LGUI SEMI
-        &kp Z       &kp X        &kp C       &kp V        &kp B               &kp N       &kp M        &kp COMMA   &kp DOT      &kp FSLH
+        &lt ZMK_L Z &kp X        &kp C       &kp V        &kp B               &kp N       &kp M        &kp COMMA   &kp DOT      &lt ZMK_L FSLH
                                     &mt LSHFT BSPC  &lt SYM_L SPACE        &lt NUM_L SPACE  &lt NAV_L ENTER
         >;
     };
@@ -85,7 +88,7 @@
       bindings = <
         &kp Q       &kp W        &kp F       &kp P        &kp B               &kp J       &kp L        &kp U       &kp Y        &kp SEMI
         &hm LGUI A  &hm LSHFT R  &hm LALT S  &hm LCTRL T  &hm RALT D          &hm RALT H  &hm RCTRL N  &hm LALT E  &hm RSHFT I  &hm LGUI O
-        &kp Z       &kp X        &kp C       &kp V        &kp B               &kp K       &kp M        &kp COMMA   &kp DOT      &kp FSLH
+        &lt ZMK_L Z &kp X        &kp C       &kp V        &kp B               &kp K       &kp M        &kp COMMA   &kp DOT      &lt ZMK_L FSLH
                                     &mt LSHFT BSPC  &lt SYM_L SPACE        &lt NUM_L SPACE  &lt NAV_L ENTER
         >;
     };
@@ -125,5 +128,18 @@
                                         &trans           &trans           &trans           &trans
         >;
     };
+
+    zmk_layer {
+      // https://zmk.dev/docs/behaviors/bluetooth
+      // https://zmk.dev/docs/behaviors/outputs
+      // https://zmk.dev/docs/behaviors/reset
+      bindings = <
+        &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &reset        &bootloader         &bootloader   &reset        &out OUT_USB  &out OUT_BLE  &bt BT_CLR
+        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0
+        &trans        &trans        &trans        &trans        &trans              &trans        &trans        &trans        &trans        &trans
+                                                  &trans        &trans              &trans        &trans
+        >;
+    };
+
   };
 };
