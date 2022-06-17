@@ -127,10 +127,10 @@
         >;
     };
 
-    zmk_layer {
+    zmk_layer {  // https://zmk.dev/docs/behaviors/bluetooth
       bindings = <
         &bt BT_CLR    &trans        &trans        &trans        &trans              &trans        &trans        &trans        &trans        &bt BT_CLR
-        &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5        &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5
+        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
         &trans        &trans        &trans        &trans        &trans              &trans        &trans        &trans        &trans        &trans
                                                   &trans        &trans              &trans        &trans
         >;
