@@ -30,11 +30,6 @@
 / {  // https://zmk.dev/docs/features/combos
   combos {
     compatible = "zmk,combos";
-    combo_zmk_layer {
-      timeout-ms = <200>;
-      key-positions = <0 20>;
-      bindings = <&tog ZMK_L>;
-    };
     combo_esc {
       timeout-ms = <50>;
       key-positions = <0 1>;
@@ -82,7 +77,7 @@
       bindings = <
         &kp Q       &kp W        &kp E       &kp R        &kp T               &kp Y       &kp U        &kp I       &kp O        &kp P
         &hm LGUI A  &hm LSHFT S  &hm LALT D  &hm LCTRL F  &hm RALT G          &hm RALT H  &hm RCTRL J  &hm LALT K  &hm RSHFT L  &hm LGUI SEMI
-        &kp Z       &kp X        &kp C       &kp V        &kp B               &kp N       &kp M        &kp COMMA   &kp DOT      &kp FSLH
+        &lt ZMK_L Z &kp X        &kp C       &kp V        &kp B               &kp N       &kp M        &kp COMMA   &kp DOT      &lt ZMK_L FSLH
                                     &mt LSHFT BSPC  &lt SYM_L SPACE        &lt NUM_L SPACE  &lt NAV_L ENTER
         >;
     };
@@ -91,7 +86,7 @@
       bindings = <
         &kp Q       &kp W        &kp F       &kp P        &kp B               &kp J       &kp L        &kp U       &kp Y        &kp SEMI
         &hm LGUI A  &hm LSHFT R  &hm LALT S  &hm LCTRL T  &hm RALT D          &hm RALT H  &hm RCTRL N  &hm LALT E  &hm RSHFT I  &hm LGUI O
-        &kp Z       &kp X        &kp C       &kp V        &kp B               &kp K       &kp M        &kp COMMA   &kp DOT      &kp FSLH
+        &lt ZMK_L Z &kp X        &kp C       &kp V        &kp B               &kp K       &kp M        &kp COMMA   &kp DOT      &lt ZMK_L FSLH
                                     &mt LSHFT BSPC  &lt SYM_L SPACE        &lt NUM_L SPACE  &lt NAV_L ENTER
         >;
     };
