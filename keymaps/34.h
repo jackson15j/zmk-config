@@ -19,12 +19,15 @@
 
 
 #define DEFAULT 0
-#define COLEMAK_L 1  // Colemak Mod-DH: https://colemakmods.github.io/mod-dh/
-#define GAME_L 2
-#define NAV_L 3
-#define NUM_L 4
-#define SYM_L 5
-#define ZMK_L 6
+#define MAC_L 1
+#define COLEMAK_L 2  // Colemak Mod-DH: https://colemakmods.github.io/mod-dh/
+#define GAME_L 3
+#define NAV_L 4
+#define NUM_L 5
+#define NUM_MAC_L 6
+#define SYM_L 7
+#define SYM_MAC_L 8
+#define ZMK_L 9
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -38,6 +41,13 @@
       bindings = <&kp ESC>;
     };
     combo_speech_mark {
+      layers = <0 2>;  // DEFAULT/COLEMAK_L
+      timeout-ms = <50>;
+      key-positions = <2 3>;
+      bindings = <&kp AT>;
+    };
+    combo_speech_mark_mac {
+      layers = <1>;  // MAC_L
       timeout-ms = <50>;
       key-positions = <2 3>;
       bindings = <&kp AT>;
@@ -84,6 +94,15 @@
         >;
     };
 
+    mac_layer {
+      bindings = <
+        &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+                   &trans  &lt SYM_MAC_L SPACE      &lt NUM_MAC_L SPACE  &trans
+        >;
+    };
+
     colemak_layer {
       bindings = <
         &kp Q       &kp W        &kp F       &kp P        &kp B               &kp J       &kp L        &kp U       &kp Y        &kp SEMI
@@ -104,9 +123,9 @@
 
     nav_layer {
       bindings = <
-        &trans  &trans  &trans         &trans       &trans            &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
-        &trans  &trans  &trans         &trans       &trans            &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
-        &trans  &trans  &to COLEMAK_L  &to DEFAULT  &to GAME_L        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
+        &trans      &trans  &trans         &trans       &trans            &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
+        &trans      &trans  &trans         &trans       &trans            &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
+        &tog MAC_L  &trans  &to COLEMAK_L  &to DEFAULT  &to GAME_L        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
                                        &trans       &trans            &trans      &trans
         >;
     };
@@ -120,12 +139,30 @@
         >;
     };
 
+    num_mac_layer {
+      bindings = <
+        &trans  &kp DQT  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+        &trans  &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+        &trans  &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+                                 &trans  &trans      &trans  &trans
+        >;
+    };
+
     sym_layer {
       bindings = <
         &kp EXCL  &kp AT    &kp LS(N3)  &kp DLLR         &kp PRCNT        &kp CARET        &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR
         &kp LBRC  &kp LBKT  &kp LPAR    &kp MINUS        &kp GRAVE        &kp NON_US_HASH  &kp UNDER  &kp RPAR   &kp RBKT   &kp RBRC
         &kp DQT   &kp PLUS  &kp PIPE2   &kp NON_US_BSLH  &kp SQT          &kp PIPE         &kp FSLH   &kp EQUAL  &kp QMARK  &kp FSLH
                                         &trans           &trans           &trans           &trans
+        >;
+    };
+
+    sym_mac_layer {
+      bindings = <
+        &trans  &kp DQT  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+        &trans  &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+        &kp AT  &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+                                 &trans  &trans      &trans  &trans
         >;
     };
 
