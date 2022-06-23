@@ -159,10 +159,10 @@
 
     sym_mac_layer {
       bindings = <
-        &kp EXCL  &kp DQT   &kp LS(N3)  &kp DLLR         &kp PRCNT        &kp CARET   &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR
-        &kp LBRC  &kp LBKT  &kp LPAR    &kp MINUS        &kp NON_US_BSLH  &kp LA(N3)  &kp UNDER  &kp RPAR   &kp RBKT   &kp RBRC
-        &kp AT    &kp PLUS  &kp PIPE    &kp NON_US_BSLH  &kp SQT          &kp PIPE2   &kp FSLH   &kp EQUAL  &kp QMARK  &kp FSLH
-                                        &trans           &trans           &trans      &trans
+        &kp EXCL  &kp DQT   &kp LS(N3)  &kp DLLR   &kp PRCNT          &kp CARET   &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR
+        &kp LBRC  &kp LBKT  &kp LPAR    &kp MINUS  &kp NON_US_BSLH    &kp LA(N3)  &kp UNDER  &kp RPAR   &kp RBKT   &kp RBRC
+        &kp AT    &kp PLUS  &kp PIPE    &kp BSLH   &kp SQT            &kp PIPE2   &kp FSLH   &kp EQUAL  &kp QMARK  &kp FSLH
+                                        &trans     &trans             &trans      &trans
         >;
     };
 
