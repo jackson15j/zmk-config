@@ -17,6 +17,15 @@ prep_zmk: ;
 	west update &&\
 	west zephyr-export
 
+docker_prep_zmk: ;
+	cd $(ZMK_PATH); \
+	echo "--- Pulling latest ZMK Firmware git changes..." &&\
+	git pull &&\
+	echo "--- Updating ZMK / Zephyr code..." &&\
+	$(DOCKER_BUILD_CMD) init -l $(ZMK_PATH)app/ &&\
+	$(DOCKER_BUILD_CMD) update &&\
+	$(DOCKER_BUILD_CMD) zephyr-export
+
 build_ferris: ;
 	# NOTE: Trailing slash runs the commands in the same shell/venv!
 	$(pre_req) \
