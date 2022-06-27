@@ -4,6 +4,16 @@ ZMK_PATH:=$(HOME)/github_forks/zmk/
 
 pre_req:=. $(ZMK_PATH).venv/bin/activate; cd $(ZMK_PATH)app/;
 
+prep_zmk: ;
+	$(pre_req) \
+	cd $(ZMK_PATH); \
+	echo "--- Pulling latest ZMK Firmware git changes..." &&\
+	git pull &&\
+	echo "--- Updating ZMK / Zephyr code..." &&\
+	west init -l $(ZMK_PATH)app/ ;\
+	west update &&\
+	west zephyr-export
+
 build_ferris: ;
 	# NOTE: Trailing slash runs the commands in the same shell/venv!
 	$(pre_req) \
@@ -21,5 +31,5 @@ build_cradio: ;
 	echo "--- Building Cradio (Sweep) RHS shield for Nice!Nano board..." &&\
 	west build -p -d build/cradio/right/ --board nice_nano -- -DSHIELD=cradio_right -DZMK_CONFIG=$(ZMK_CONFIG_PATH)
 
-build_all: build_ferris build_cradio
-build_all_34: build_ferris build_cradio
+build_all: prep_zmk build_ferris build_cradio
+build_all_34: prep_zmk build_ferris build_cradio
