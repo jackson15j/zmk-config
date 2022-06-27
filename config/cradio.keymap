@@ -1,5 +1,5 @@
 // Local Variables:
-// compile-command: "cd ..; make build_cradio"
+// compile-command: "cd ..; make docker_build_cradio"
 // End:
 /*
  * Copyright (c) 2020 The ZMK Contributors

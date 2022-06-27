@@ -1,5 +1,5 @@
 // Local Variables:
-// compile-command: "cd ..; make build_all_34"
+// compile-command: "cd ..; make docker_build_all_34"
 // End:
 /*
  * Shared 34 key keymap.
