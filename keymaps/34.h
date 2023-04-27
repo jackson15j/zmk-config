@@ -16,7 +16,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <behaviors.dtsi>
 
 
 #define DEFAULT 0
@@ -31,20 +30,6 @@
 #define ZMK_L 9
 
 
-// https://zmk.dev/docs/behaviors/hold-tap#example-use-cases
-#define MO_TO(layer) &mo_to layer layer   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
-
-/ {
-    behaviors {
-        mo_to: behavior_mo_to {
-            compatible = "zmk,behavior-hold-tap";
-            label = "mo_to";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&to>;
-        };
-    };
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -87,6 +72,10 @@
   };
 };
 
+// https://zmk.dev/docs/behaviors/hold-tap#example-use-cases
+#define MO_TO(layer) &mo_to layer layer   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
+
+
 / {
   behaviors {
   hm: homerow_mods {
@@ -96,6 +85,16 @@
       tapping_term_ms = <200>;
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
+    };
+  };
+  behaviors {
+  mo_to: behavior_mo_to {
+         compatible = "zmk,behavior-hold-tap";
+         label = "mo_to";
+         #binding-cells = <2>;
+         flavor = "hold-preferred";
+         tapping-term-ms = <200>;
+         bindings = <&mo>, <&to>;
     };
   };
 
