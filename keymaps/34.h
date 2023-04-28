@@ -86,8 +86,6 @@
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
     };
-  };
-  behaviors {
   mo_to: behavior_mo_to {
          compatible = "zmk,behavior-hold-tap";
          label = "mo_to";
