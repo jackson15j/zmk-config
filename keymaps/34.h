@@ -20,17 +20,18 @@
 
 #define DEFAULT 0
 #define MAC_L 1
-#define COLEMAK_L 2  // Colemak Mod-DH: https://colemakmods.github.io/mod-dh/
-#define GAME_L 3
-#define NAV_L 4
-#define NUM_L 5
-#define NUM_MAC_L 6
-#define SYM_L 7
-#define SYM_MAC_L 8
-#define ZMK_L 9
-#define SYM_NUM_MAC_L 10
-#define ZMK_NAV_L 11
-#define FUNCTION_L 12
+#define MAC_COLEMAK 2
+#define COLEMAK_L 3  // Colemak Mod-DH: https://colemakmods.github.io/mod-dh/
+#define GAME_L 4
+#define NAV_L 5
+#define NUM_L 6
+#define NUM_MAC_L 7
+#define SYM_L 8
+#define SYM_MAC_L 9
+#define ZMK_L 10
+#define SYM_NUM_MAC_L 11
+#define ZMK_NAV_L 12
+#define FUNCTION_L 13
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -102,23 +103,32 @@
 
     default_layer {
       bindings = <
-        &kp Q       &kp W        &kp E       &kp R        &kp T               &kp Y       &kp U        &kp I       &kp O        &kp P
-        &hm LGUI A  &hm LSHFT S  &hm LALT D  &hm LCTRL F  &hm RALT G          &hm RALT H  &hm RCTRL J  &hm LALT K  &hm RSHFT L  &hm LGUI SEMI
-        &lt ZMK_L Z &kp X        &kp C       &kp V        &kp B               &kp N       &kp M        &kp COMMA   &kp DOT      &lt ZMK_L FSLH
+        &kp Q       &kp W        &kp E       &kp R        &kp T            &kp Y       &kp U        &kp I       &kp O        &kp P
+        &hm LGUI A  &hm LSHFT S  &hm LALT D  &hm LCTRL F  &hm RALT G       &hm RALT H  &hm RCTRL J  &hm LALT K  &hm RSHFT L  &hm LGUI SEMI
+        &lt ZMK_L Z &kp X        &kp C       &kp V        &kp B            &kp N       &kp M        &kp COMMA   &kp DOT      &lt ZMK_L FSLH
                                     &mt LSHFT BSPC  &lt SYM_L SPACE        &lt NUM_L SPACE  &lt NAV_L ENTER
         >;
     };
 
     mac_layer {
       bindings = <
-        &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
-         &mt LSHFT LC(BSPC)  &to SYM_NUM_MAC_L     &lt NUM_MAC_L SPACE  &trans
+        &kp Q       &kp W        &kp E       &kp R        &kp T            &kp Y       &kp U        &kp I       &kp O        &kp P
+        &hm LGUI A  &hm LSHFT S  &hm LALT D  &hm LCTRL F  &hm RALT G       &hm RALT H  &hm RCTRL J  &hm LALT K  &hm RSHFT L  &hm LGUI SEMI
+        &kp Z       &kp X        &kp C       &kp V        &kp B            &kp N       &kp M        &kp COMMA   &kp DOT      &kp FSLH
+                                 &mt LSHFT LC(BSPC)  &to SYM_NUM_MAC_L     &lt NUM_MAC_L SPACE  &trans
         >;
     };
 
-    colemak_layer {
+    mac_colemak_layer {
+      bindings = <
+        &kp Q       &kp W        &kp F       &kp P        &kp G            &kp J       &kp L        &kp U       &kp Y        &kp SEMI
+        &hm LGUI A  &hm LSHFT R  &hm LALT S  &hm LCTRL T  &hm RALT D       &hm RALT H  &hm RCTRL N  &hm LALT E  &hm RSHFT I  &hm LGUI O
+        &kp Z       &kp X        &kp C       &kp V        &kp B            &kp K       &kp M        &kp COMMA   &kp DOT      &kp FSLH
+                                 &mt LSHFT LC(BSPC)  &to SYM_NUM_MAC_L     &lt NUM_MAC_L SPACE  &trans
+        >;
+    };
+
+   colemak_layer {
       bindings = <
         &kp Q       &kp W        &kp F       &kp P        &kp G               &kp J       &kp L        &kp U       &kp Y        &kp SEMI
         &hm LGUI A  &hm LSHFT R  &hm LALT S  &hm LCTRL T  &hm RALT D          &hm RALT H  &hm RCTRL N  &hm LALT E  &hm RSHFT I  &hm LGUI O
@@ -140,7 +150,7 @@
       bindings = <
         &trans      &trans         &trans         &trans       &trans            &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
         &trans      &trans         &trans         &trans       &trans            &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
-        &to MAC_L  &to COLEMAK_L  &to COLEMAK_L  &to DEFAULT  &to GAME_L        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
+        &to MAC_L  &to MAC_COLEMAK_L  &to COLEMAK_L  &to DEFAULT  &to GAME_L     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
                                                   &trans       &trans            &trans      &trans
         >;
     };
@@ -226,10 +236,10 @@
       // https://zmk.dev/docs/behaviors/outputs
       // https://zmk.dev/docs/behaviors/reset
       bindings = <
-        &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &sys_reset        &bootloader       &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
-        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
-        &to MAC_L  &to COLEMAK_L  &to COLEMAK_L   &to DEFAULT   &to GAME_L        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
-                                                  &trans        &trans            &trans  &trans
+        &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &sys_reset        &bootloader     &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
+        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
+        &to MAC_L  &to MAC_COLEMAK_L  &to COLEMAK_L   &to DEFAULT   &to GAME_L      &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
+                                                      &trans        &trans          &trans  &trans
        >;
    };
 
