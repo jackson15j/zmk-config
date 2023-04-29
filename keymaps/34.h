@@ -140,7 +140,7 @@
       bindings = <
         &trans      &trans         &trans         &trans       &trans            &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
         &trans      &trans         &trans         &trans       &trans            &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
-        &tog MAC_L  &to COLEMAK_L  &to COLEMAK_L  &to DEFAULT  &to GAME_L        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
+        &to MAC_L  &to COLEMAK_L  &to COLEMAK_L  &to DEFAULT  &to GAME_L        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
                                                   &trans       &trans            &trans      &trans
         >;
     };
@@ -229,7 +229,7 @@
         &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &reset        &bootloader       &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
         &to MAC_L  &to COLEMAK_L  &to COLEMAK_L   &to DEFAULT  &to GAME_L         &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
-                                                  &trans        &to DEFAULT       &to DEFAULT
+                                                  &trans        &to DEFAULT       &to DEFAULT  &trans
        >;
    };
 
