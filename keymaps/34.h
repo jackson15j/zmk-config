@@ -215,9 +215,9 @@
     sym_num_mac_layer {
       bindings = <
         &kp SQT    &kp DQT    &kp LBKT   &kp RBKT  &kp NON_US_HASH    &kp PLUS   &kp N7  &kp N8  &kp N9  &kp EQUAL
-        &kp QMARK  &kp UNDER  &kp LPAR   &kp RPAR  &kp NON_US_BSLH     &kp N0     &kp N1  &kp N2  &kp N3  &kp COLON
+        &kp QMARK  &kp UNDER  &kp LPAR   &kp RPAR  &kp NON_US_BSLH    &kp N0     &kp N1  &kp N2  &kp N3  &kp COLON
         &kp AT     &kp BSLH   &kp PIPE2  &kp FSLH  &kp PIPE           &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT
-                                &mt LSHFT BSPC  &to ZMK_NAV_L        &mo_to DEFAULT FUNCTION_L  &trans
+                                &mt LSHFT BSPC  &to ZMK_NAV_L         &mo_to MAC_L FUNCTION_L  &trans
         >;
     };
 
@@ -228,16 +228,16 @@
       bindings = <
         &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &reset        &bootloader       &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
-        &to MAC_L  &to COLEMAK_L  &to COLEMAK_L   &to DEFAULT  &to GAME_L         &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
-                                                  &trans        &to DEFAULT       &to DEFAULT  &trans
+        &to MAC_L  &to COLEMAK_L  &to COLEMAK_L   &to DEFAULT   &to GAME_L        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
+                                                  &trans        &trans            &trans  &trans
        >;
    };
 
     function_layer {
       bindings = <
-        &trans  &trans  &trans  &trans  &trans    &kp FN12  &kp FN7  &kp FN8  &kp FN9  &trans
-        &trans  &trans  &trans  &trans  &trans    &kp FN10  &kp FN1  &kp FN2  &kp FN3  &trans
-        &trans  &trans  &trans  &trans  &trans    &kp FN11  &kp FN4  &kp FN5  &kp FN6  &QMARK
+        &trans  &trans  &trans  &trans  &trans    &kp F12  &kp F7  &kp F8  &kp F9  &trans
+        &trans  &trans  &trans  &trans  &trans    &kp F10  &kp F1  &kp F2  &kp F3  &trans
+        &trans  &trans  &trans  &trans  &trans    &kp F11  &kp F4  &kp F5  &kp F6  &QMARK
                                 &trans  &trans    &trans  &trans
         >;
     };
