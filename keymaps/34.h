@@ -28,8 +28,9 @@
 #define SYM_L 7
 #define SYM_MAC_L 8
 #define ZMK_L 9
-
-
+#define SYM_NUM_MAC_L 10
+#define ZMK_NAV_L 11
+#define FUNCTION_L 12
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -113,7 +114,7 @@
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
-         &kp LC(BSPC)  &to SYM_NUM_MAC_L     &lt NUM_MAC_L SPACE  &trans
+         &mt LSHFT LC(BSPC)  &to SYM_NUM_MAC_L     &lt NUM_MAC_L SPACE  &trans
         >;
     };
 
