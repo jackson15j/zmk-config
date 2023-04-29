@@ -20,7 +20,7 @@
 
 #define DEFAULT 0
 #define MAC_L 1
-#define MAC_COLEMAK 2
+#define MAC_COLEMAK_L 2
 #define COLEMAK_L 3  // Colemak Mod-DH: https://colemakmods.github.io/mod-dh/
 #define GAME_L 4
 #define NAV_L 5
@@ -88,13 +88,13 @@
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
     };
-  mo_to: behavior_mo_to {
+  mo_tog: behavior_mo_tog {
          compatible = "zmk,behavior-hold-tap";
-         label = "mo_to";
+         label = "mo_tog";
          #binding-cells = <2>;
          flavor = "hold-preferred";
          tapping-term-ms = <200>;
-         bindings = <&mo>, <&to>;
+         bindings = <&mo>, <&tog>;
     };
   };
 
@@ -227,7 +227,7 @@
         &kp SQT    &kp DQT    &kp LBKT   &kp RBKT  &kp NON_US_HASH    &kp PLUS   &kp N7  &kp N8  &kp N9  &kp EQUAL
         &kp QMARK  &kp UNDER  &kp LPAR   &kp RPAR  &kp NON_US_BSLH    &kp N0     &kp N1  &kp N2  &kp N3  &kp COLON
         &kp AT     &kp BSLH   &kp PIPE2  &kp FSLH  &kp PIPE           &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT
-                                &mt LSHFT BSPC  &to ZMK_NAV_L         &mo_to MAC_L FUNCTION_L  &trans
+                                &mt LSHFT BSPC  &tog ZMK_NAV_L         &mo_tog SYM_NUM_MAC_L FUNCTION_L  &trans
         >;
     };
 
