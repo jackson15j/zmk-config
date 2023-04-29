@@ -113,7 +113,7 @@
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
-         &mt LSHIFT LC(BSPC)  &to SYM_NUM_MAC_L     &lt NUM_MAC_L SPACE  &trans
+         &kp LC(BSPC)  &to SYM_NUM_MAC_L     &lt NUM_MAC_L SPACE  &trans
         >;
     };
 
