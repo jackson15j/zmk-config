@@ -112,10 +112,10 @@
 
     mac_layer {
       bindings = <
-        &kp Q       &kp W        &kp E       &kp R        &kp T            &kp Y       &kp U        &kp I       &kp O        &kp P
-        &hm LGUI A  &hm LSHFT S  &hm LALT D  &hm LCTRL F  &hm RALT G       &hm RALT H  &hm RCTRL J  &hm LALT K  &hm RSHFT L  &hm LGUI SEMI
-        &kp Z       &kp X        &kp C       &kp V        &kp B            &kp N       &kp M        &kp COMMA   &kp DOT      &kp FSLH
-                                 &mt LSHFT LC(BSPC)  &to SYM_NUM_MAC_L     &lt NUM_MAC_L SPACE  &trans
+        &kp Q       &kp W        &kp E       &kp R        &kp T             &kp Y       &kp U        &kp I       &kp O        &kp P
+        &hm LGUI A  &hm LSHFT S  &hm LALT D  &hm LCTRL F  &hm RALT G        &hm RALT H  &hm RCTRL J  &hm LALT K  &hm RSHFT L  &hm LGUI SEMI
+        &kp Z       &kp X        &kp C       &kp V        &kp B             &kp N       &kp M        &kp COMMA   &kp DOT      &kp FSLH
+                                 &mt LSHFT LC(BSPC)  &tog SYM_NUM_MAC_L     &lt NUM_MAC_L SPACE  &trans
         >;
     };
 
@@ -227,7 +227,7 @@
         &kp SQT    &kp DQT    &kp LBKT   &kp RBKT  &kp NON_US_HASH    &kp PLUS   &kp N7  &kp N8  &kp N9  &kp EQUAL
         &kp QMARK  &kp UNDER  &kp LPAR   &kp RPAR  &kp NON_US_BSLH    &kp N0     &kp N1  &kp N2  &kp N3  &kp COLON
         &kp AT     &kp BSLH   &kp PIPE2  &kp FSLH  &kp PIPE           &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT
-                                &mt LSHFT BSPC  &tog ZMK_NAV_L         &mo_tog SYM_NUM_MAC_L FUNCTION_L  &trans
+                                   &mt LSHFT BSPC  &tog ZMK_NAV_L      &mo_tog SYM_NUM_MAC_L FUNCTION_L  &trans
         >;
     };
 
@@ -239,7 +239,7 @@
         &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &sys_reset        &bootloader     &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
         &to MAC_L  &to MAC_COLEMAK_L  &to COLEMAK_L   &to DEFAULT   &to GAME_L      &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
-                                                      &trans        &trans          &trans  &trans
+                                                      &trans        &trans          &tog ZMK_NAV_L  &trans
        >;
    };
 
