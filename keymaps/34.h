@@ -224,9 +224,9 @@
 
     sym_num_mac_layer {
       bindings = <
-        &kp SQT    &kp DQT    &kp LBKT   &kp RBKT  &kp NON_US_HASH    &kp PLUS   &kp N7  &kp N8  &kp N9  &kp EQUAL
-        &kp QMARK  &kp UNDER  &kp LPAR   &kp RPAR  &kp NON_US_BSLH    &kp N0     &kp N1  &kp N2  &kp N3  &kp COLON
-        &kp AT     &kp BSLH   &kp PIPE2  &kp FSLH  &kp PIPE           &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT
+        &kp SQT    &kp DQT    &kp LBKT   &kp RBKT  &kp NON_US_HASH     &kp PLUS   &kp N7  &kp N8  &kp N9  &kp EQUAL
+        &hm LGUI QMARK  &hm LSHFT UNDER  &hm LALT LPAR   &hm LCTRL RPAR  &hm RALT NON_US_BSLH     &hm RALT N0  &hm RCTRL N1  &hm LALT N2  &hm RSHIFT N3  &hm LGUI COLON
+        &kp AT     &kp BSLH   &kp PIPE2  &kp FSLH  &kp PIPE            &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT
                                    &mt LSHFT BSPC  &tog ZMK_NAV_L      &mo_tog SYM_NUM_MAC_L FUNCTION_L  &trans
         >;
     };
