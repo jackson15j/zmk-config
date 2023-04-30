@@ -112,10 +112,10 @@
 
     mac_layer {
       bindings = <
-        &kp Q       &kp W        &kp E       &kp R        &kp T             &kp Y       &kp U        &kp I       &kp O        &kp P
-        &hm LGUI A  &hm LSHFT S  &hm LALT D  &hm LCTRL F  &hm RALT G        &hm RALT H  &hm RCTRL J  &hm LALT K  &hm RSHFT L  &hm LGUI SEMI
-        &kp Z       &kp X        &kp C       &kp V        &kp B             &kp N       &kp M        &kp COMMA   &kp DOT      &kp FSLH
-                                 &mt LSHFT LC(BSPC)  &tog SYM_NUM_MAC_L     &lt NUM_MAC_L SPACE  &trans
+        &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans
+        &mt LSHFT LC(BSPC)  &tog SYM_NUM_MAC_L     &lt NUM_MAC_L SPACE  &trans
         >;
     };
 
