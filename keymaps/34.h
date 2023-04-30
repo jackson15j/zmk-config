@@ -151,7 +151,7 @@
         &trans      &trans         &trans         &trans       &trans            &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
         &trans      &trans         &trans         &trans       &trans            &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
         &to MAC_L  &to MAC_COLEMAK_L  &to COLEMAK_L  &to DEFAULT  &to GAME_L     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
-                                                  &trans       &trans            &trans      &trans
+                                                  &trans       &trans            &tog NAV_L  &trans
         >;
     };
 
