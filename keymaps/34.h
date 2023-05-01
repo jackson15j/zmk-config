@@ -115,7 +115,6 @@
         &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans     &trans  &trans
                     &trans  &tog SYM_NUM_MAC_L     &trans &trans
         >;
     };
