@@ -146,15 +146,6 @@
         >;
     };
 
-    nav_layer {
-      bindings = <
-        &trans      &trans         &trans         &trans       &trans            &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
-        &trans      &trans         &trans         &trans       &trans            &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
-        &to MAC_L  &to MAC_COLEMAK_L  &to COLEMAK_L  &to DEFAULT  &to GAME_L     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
-                                                  &trans       &trans            &tog NAV_L  &trans
-        >;
-    };
-
     num_layer {
       bindings = <
         &kp EXCL  &kp AT  &kp LS(N3)  &kp DLLR  &kp PRCNT       &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR
@@ -237,6 +228,15 @@
         &hm LGUI QMARK  &hm LSHFT UNDER  &hm LALT LPAR   &hm LCTRL RPAR  &hm RALT NON_US_BSLH     &hm RALT N0  &hm RCTRL N1  &hm LALT N2  &hm RSHIFT N3  &hm LGUI COLON
         &kp AT     &kp BSLH   &kp PIPE2  &kp FSLH  &kp PIPE            &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT
                                    &mt LSHFT BSPC  &tog NAV_L          &mo_tog ZMK_FUNCTION_L SYM_NUM_MAC_L  &trans
+        >;
+    };
+
+    nav_layer {
+      bindings = <
+        &trans      &trans         &trans         &trans       &trans            &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
+        &trans      &trans         &trans         &trans       &trans            &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
+        &to MAC_L  &to MAC_COLEMAK_L  &to COLEMAK_L  &to DEFAULT  &to GAME_L     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
+                                                  &trans       &trans            &tog NAV_L  &trans
         >;
     };
 
