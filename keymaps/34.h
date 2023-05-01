@@ -23,15 +23,15 @@
 #define MAC_COLEMAK_L 2
 #define COLEMAK_L 3  // Colemak Mod-DH: https://colemakmods.github.io/mod-dh/
 #define GAME_L 4
-#define NUM_L 6
-#define NUM_MAC_L 7
-#define SYM_L 8
-#define SYM_MAC_L 9
-#define ZMK_L 10
-#define SYM_NUM_L 11
-#define SYM_NUM_MAC_L 12
-#define ZMK_FUNCTION_L 13
-#define NAV_L 15
+#define NUM_L 5
+#define NUM_MAC_L 6
+#define SYM_L 7
+#define SYM_MAC_L 8
+#define ZMK_L 9
+#define SYM_NUM_L 10
+#define SYM_NUM_MAC_L 11
+#define ZMK_FUNCTION_L 12
+#define NAV_L 13
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
