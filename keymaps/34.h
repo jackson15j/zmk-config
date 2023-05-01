@@ -23,14 +23,15 @@
 #define MAC_COLEMAK_L 2
 #define COLEMAK_L 3  // Colemak Mod-DH: https://colemakmods.github.io/mod-dh/
 #define GAME_L 4
-#define NAV_L 5
 #define NUM_L 6
 #define NUM_MAC_L 7
 #define SYM_L 8
 #define SYM_MAC_L 9
 #define ZMK_L 10
-#define SYM_NUM_MAC_L 11
-#define ZMK_FUNCTION_L 12
+#define SYM_NUM_L 11
+#define SYM_NUM_MAC_L 12
+#define ZMK_FUNCTION_L 13
+#define NAV_L 15
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -105,7 +106,7 @@
         &kp Q       &kp W        &kp E       &kp R        &kp T            &kp Y       &kp U        &kp I       &kp O        &kp P
         &hm LGUI A  &hm LSHFT S  &hm LALT D  &hm LCTRL F  &hm RALT G       &hm RALT H  &hm RCTRL J  &hm LALT K  &hm RSHFT L  &hm LGUI SEMI
         &lt ZMK_L Z &kp X        &kp C       &kp V        &kp B            &kp N       &kp M        &kp COMMA   &kp DOT      &lt ZMK_L FSLH
-                                    &mt LSHFT BSPC  &lt SYM_L SPACE        &lt ZMK_FUNCTION_L SPACE  &lt NAV_L ENTER
+                                    &mt LSHFT LC(BSPC)  &tog SYM_NUM_L     &lt ZMK_FUNCTION_L SPACE  &lt NAV_L ENTER
         >;
     };
 
@@ -114,7 +115,8 @@
         &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans
-        &mt LSHFT LC(BSPC)  &tog SYM_NUM_MAC_L     &lt ZMK_FUNCTION_L SPACE  &trans
+                                &trans  &trans     &trans  &trans
+                    &trans  &tog SYM_NUM_MAC_L     &trans &trans
         >;
     };
 
@@ -123,7 +125,7 @@
         &kp Q       &kp W        &kp F       &kp P        &kp G            &kp J       &kp L        &kp U       &kp Y        &kp SEMI
         &hm LGUI A  &hm LSHFT R  &hm LALT S  &hm LCTRL T  &hm RALT D       &hm RALT H  &hm RCTRL N  &hm LALT E  &hm RSHFT I  &hm LGUI O
         &kp Z       &kp X        &kp C       &kp V        &kp B            &kp K       &kp M        &kp COMMA   &kp DOT      &kp FSLH
-                                 &mt LSHFT LC(BSPC)  &to SYM_NUM_MAC_L     &lt ZMK_FUNCTION_L SPACE  &trans
+                                            &trans  &tog SYM_NUM_MAC_L     &trans &trans
         >;
     };
 
@@ -132,7 +134,7 @@
         &kp Q       &kp W        &kp F       &kp P        &kp G               &kp J       &kp L        &kp U       &kp Y        &kp SEMI
         &hm LGUI A  &hm LSHFT R  &hm LALT S  &hm LCTRL T  &hm RALT D          &hm RALT H  &hm RCTRL N  &hm LALT E  &hm RSHFT I  &hm LGUI O
         &lt ZMK_L Z &kp X        &kp C       &kp V        &kp B               &kp K       &kp M        &kp COMMA   &kp DOT      &lt ZMK_L FSLH
-                                    &mt LSHFT BSPC  &lt SYM_L SPACE        &lt NUM_L SPACE  &lt NAV_L ENTER
+                                                    &trans    &trans          &trans     &trans
         >;
     };
 
@@ -221,12 +223,21 @@
   default. Backspace is on same key for other layers, for original behaviour.
  */
 
+    sym_num_layer {
+      bindings = <
+        &kp SQT     &kp AT    &kp LBKT   &kp RBKT  &kp NON_US_HASH     &kp PLUS   &kp N7  &kp N8  &kp N9  &kp EQUAL
+        &hm LGUI QMARK  &hm LSHFT UNDER  &hm LALT LPAR   &hm LCTRL RPAR  &hm RALT GRAVE     &hm RALT N0  &hm RCTRL N1  &hm LALT N2  &hm RSHIFT N3  &hm LGUI COLON
+        &kp DQT  &kp NON__US_BSLH  &kp PIPE2  &kp PIPEE  &kp FSLH            &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT
+                                   &mt LSHFT BSPC  &tog NAV_L          &mo_tog ZMK_FUNCTION_L SYM_NUM_L  &trans
+        >;
+    };
+
     sym_num_mac_layer {
       bindings = <
         &kp SQT    &kp DQT    &kp LBKT   &kp RBKT  &kp NON_US_HASH     &kp PLUS   &kp N7  &kp N8  &kp N9  &kp EQUAL
         &hm LGUI QMARK  &hm LSHFT UNDER  &hm LALT LPAR   &hm LCTRL RPAR  &hm RALT NON_US_BSLH     &hm RALT N0  &hm RCTRL N1  &hm LALT N2  &hm RSHIFT N3  &hm LGUI COLON
         &kp AT     &kp BSLH   &kp PIPE2  &kp FSLH  &kp PIPE            &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT
-                                   &mt LSHFT BSPC  &tog NAV_L          &mo_tog SYM_NUM_MAC_L ZMK_FUNCTION_L  &trans
+                                   &mt LSHFT BSPC  &tog NAV_L          &mo_tog ZMK_FUNCTION_L SYM_NUM_MAC_L  &trans
         >;
     };
 
@@ -235,7 +246,7 @@
       // https://zmk.dev/docs/behaviors/outputs
       // https://zmk.dev/docs/behaviors/reset
       bindings = <
-        &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &sys_reset        &bootloader     &kp F12  &kp F7  &kp F8  &kp F9  &trans
+        &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &sys_reset        &bootloader     &kp F12  &kp F7  &kp F8  &kp F9  &bootloader
         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &kp F10  &kp F1  &kp F2  &kp F3  &trans
         &to MAC_L  &to MAC_COLEMAK_L  &to COLEMAK_L   &to DEFAULT   &to GAME_L      &kp F11  &kp F4  &kp F5  &kp F6  &kp QMARK
                                                                  &trans  &trans     &trans  &trans
