@@ -216,8 +216,8 @@
     sym_num_layer {
       bindings = <
         &kp SQT     &kp AT    &kp LBKT   &kp RBKT  &kp NON_US_HASH     &kp PLUS   &kp N7  &kp N8  &kp N9  &kp EQUAL
-        &hm LGUI QMARK  &hm LSHFT UNDER  &hm LALT LPAR   &hm LCTRL RPAR  &hm RALT GRAVE     &hm RALT N0  &hm RCTRL N1  &hm LALT N2  &hm RSHIFT N3  &hm LGUI COLON
-        &kp DQT  &kp NON_US_BSLH  &kp PIPE2  &kp PIPE  &kp FSLH            &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT
+        &hm LGUI QMARK  &hm LSHFT UNDER  &hm LALT LPAR  &hm LCTRL RPAR  &hm RALT GRAVE     &hm RALT N0  &hm RCTRL N1  &hm LALT N2  &hm RSHIFT N3  &hm LGUI COLON
+        &kp DQT  &kp NON_US_BSLH  &kp PIPE2  &kp FSLH  &kp PIPE2            &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT
                                    &mt LSHFT BSPC  &tog NAV_L          &mo_tog ZMK_FUNCTION_L SYM_NUM_L  &trans
         >;
     };
