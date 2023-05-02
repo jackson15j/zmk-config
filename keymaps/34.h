@@ -106,7 +106,7 @@
         &kp Q       &kp W        &kp E       &kp R        &kp T            &kp Y       &kp U        &kp I       &kp O        &kp P
         &hm LGUI A  &hm LSHFT S  &hm LALT D  &hm LCTRL F  &hm RALT G       &hm RALT H  &hm RCTRL J  &hm LALT K  &hm RSHFT L  &hm LGUI SEMI
         &lt ZMK_L Z &kp X        &kp C       &kp V        &kp B            &kp N       &kp M        &kp COMMA   &kp DOT      &lt ZMK_L FSLH
-                                    &mt LSHFT LC(BSPC)  &tog SYM_NUM_L     &lt ZMK_FUNCTION_L SPACE  &lt NAV_L ENTER
+                    &mt LSHFT LC(BSPC)  &mo_tog SYM_NUM_L SYM_NUM_L        &lt ZMK_FUNCTION_L SPACE  &lt NAV_L ENTER
         >;
     };
 
@@ -115,7 +115,7 @@
         &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans
-                    &trans  &tog SYM_NUM_MAC_L     &trans &trans
+   &trans  &mo_tog SYM_NUM_MAC_L SYM_NUM_MAC_L     &trans &trans
         >;
     };
 
@@ -124,7 +124,7 @@
         &kp Q       &kp W        &kp F       &kp P        &kp G            &kp J       &kp L        &kp U       &kp Y        &kp SEMI
         &hm LGUI A  &hm LSHFT R  &hm LALT S  &hm LCTRL T  &hm RALT D       &hm RALT H  &hm RCTRL N  &hm LALT E  &hm RSHFT I  &hm LGUI O
         &kp Z       &kp X        &kp C       &kp V        &kp B            &kp K       &kp M        &kp COMMA   &kp DOT      &kp FSLH
-                                            &trans  &tog SYM_NUM_MAC_L     &trans &trans
+                           &trans  &mo_tog SYM_NUM_MAC_L SYM_NUM_MAC_L     &trans &trans
         >;
     };
 
