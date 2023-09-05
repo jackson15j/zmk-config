@@ -10,6 +10,10 @@
  * ~/github_forks/zmk/app $ west build -p -d build/cradio/left/ --board nice_nano -- -DSHIELD=cradio_left -DZMK_CONFIG=$HOME/github_repos/zmk-config/config/ && west flash -d build/cradio/left/
  * ~/github_forks/zmk/app $ west build -p -d build/cradio/right/ --board nice_nano -- -DSHIELD=cradio_right -DZMK_CONFIG=$HOME/github_repos/zmk-config/config/ && west flash -d build/cradio/right/
  *
+ * To flash on a mac, I need to manually mount the fat16 filesystem once the nicenano has been reset:
+ * sudo mount -t msdos /dev/disk4 <path>
+ *
+ * ^^ above path can be seen under the 'nice!nano v2' entry in System Information's USB section.
  */
 
 #include "../keymaps/34.h"
