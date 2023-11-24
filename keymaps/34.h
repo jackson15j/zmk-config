@@ -127,12 +127,13 @@
         >;
     };
 
+    // Momentary toggle of the default layer to trigger Conditional Layer changes on symbols/number layers.
     mac_layer {
       bindings = <
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
-                   &trans  &lt SYM_MAC_L SPACE      &lt NUM_MAC_L SPACE  &trans
+                                &trans  &trans      &trans  &trans
         >;
     };
 
