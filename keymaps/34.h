@@ -175,10 +175,10 @@
 
     num_mac_layer {
       bindings = <
-        &kp EXCL  &kp DQT &kp LS(N3)  &kp DLLR  &kp PRCNT       &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR
-        &kp N1    &kp N2  &kp N3      &kp N4    &kp N5          &kp N6     &kp N7    &kp N8    &kp N9    &kp N0
-        &kp F1    &kp F2  &kp F3      &kp F4    &kp F5          &kp F6     &kp F7    &kp F8    &kp DOT   &kp F12
-                                      &trans    &trans          &trans     &trans
+        &trans  &kp DQT  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+        &trans  &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+        &trans  &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+                                 &trans  &trans      &trans  &trans
         >;
     };
 
@@ -193,10 +193,10 @@
 
     sym_mac_layer {
       bindings = <
-        &kp EXCL  &kp DQT   &kp LS(N3)  &kp DLLR   &kp PRCNT          &kp CARET   &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR
-        &kp LBRC  &kp LBKT  &kp LPAR    &kp MINUS  &kp NON_US_BSLH    &kp LA(N3)  &kp UNDER  &kp RPAR   &kp RBKT   &kp RBRC
-        &kp AT    &kp PLUS  &kp PIPE    &kp BSLH   &kp SQT            &kp PIPE2   &kp FSLH   &kp EQUAL  &kp QMARK  &kp FSLH
-                                        &trans     &trans             &trans      &trans
+        &trans  &kp DQT  &trans     &trans     &trans             &trans      &trans  &trans  &trans  &trans
+        &trans  &trans   &trans     &trans     &kp NON_US_BSLH    &kp LA(N3)  &trans  &trans  &trans  &trans
+        &kp AT  &trans   &kp PIPE   &kp BSLH   &trans             &kp PIPE    &trans  &trans  &trans  &trans
+                                    &trans     &trans             &trans      &trans
         >;
     };
 
