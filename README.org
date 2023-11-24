@@ -52,9 +52,9 @@ Distilled from: [[https://zmk.dev/docs/development/setup][ZMK Docs: Toolchain Se
 
 #+BEGIN_SRC shell :var zmk_path="../zmk"
   echo "- Subsequent builds in the container..."
-  docker exec zmk west build -p -s /app -d build/cradio/right/ --board nice_nano -- -DSHIELD=cradio_right -DZMK_CONFIG=/zmk-config/config
-  docker exec zmk west build -p -s /app -d build/cradio/left/ --board nice_nano -- -DSHIELD=cradio_left -DZMK_CONFIG=/zmk-config/config
-  docker exec zmk west build -p -s /app -d build/ferris --board ferris_rev02 -- -DZMK_CONFIG=/zmk-config/config
+  docker exec zmk west build -p -s /app -d /app/build/cradio/right/ --board nice_nano -- -DSHIELD=cradio_right -DZMK_CONFIG=/zmk-config/config
+  docker exec zmk west build -p -s /app -d /app/build/cradio/left/ --board nice_nano -- -DSHIELD=cradio_left -DZMK_CONFIG=/zmk-config/config
+  docker exec zmk west build -p -s /app -d /app/build/ferris --board ferris_rev02 -- -DZMK_CONFIG=/zmk-config/config
 
   echo "- SymLink one of the compile_commands.json to satisfy clangd lsp + eglot in emacs..."
   docker exec zmk ln -sf /app/build/craidio/right/compile_commands.json /zmk-config/.
