@@ -20,14 +20,16 @@
 
 #define DEFAULT 0
 #define MAC_L 1
-#define COLEMAK_L 2  // Colemak Mod-DH: https://colemakmods.github.io/mod-dh/
-#define GAME_L 3
-#define NAV_L 4
-#define NUM_L 5
-#define NUM_MAC_L 6
-#define SYM_L 7
-#define SYM_MAC_L 8
-#define ZMK_L 9
+#define COLEMAK_L 2  /* Colemak Mod-DH: https://colemakmods.github.io/mod-dh/ */
+#define HDG_L 3  /* HandsDown-Gold: https://sites.google.com/alanreiser.com/handsdown/home/hands-down-neu#h.8i2msuo3butx */
+#define HDG_MAC_L 4
+#define GAME_L 5
+#define NAV_L 6
+#define NUM_L 7
+#define NUM_MAC_L 8
+#define SYM_L 9
+#define SYM_MAC_L 10
+#define ZMK_L 11
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -92,13 +94,17 @@
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        mac_numbers_layer {
-            if-layers = <1 5>;
-            then-layer = <6>;
+        mac_handsdown_gold_layer {
+            if-layers = <1 3>;
+            then-layer = <4>;
         };
-        mac_symbols_layer {
+        mac_numbers_layer {
             if-layers = <1 7>;
             then-layer = <8>;
+        };
+        mac_symbols_layer {
+            if-layers = <1 9>;
+            then-layer = <10>;
         };
     };
 };
@@ -146,7 +152,33 @@
         >;
     };
 
-    game_layer {
+
+/*
+  HandsDown Gold
+  jz g  m  p  v   ;: .& /* "? '!
+  r  s  n  d  b   ,| a  e  i  h
+  x  f  l  c  w   -+ u  o  y  kq
+              t   ␣
+*/
+    hdg_layer {
+      bindings = <
+        &kp J       &kp G        &kp M       &kp P        &kp V           &kp SEMI         &kp DOT      &kp FSLH    &kp AT       &kp SQT
+        &hm LGUI R  &hm LSHFT S  &hm LALT N  &hm LCTRL D  &hm RALT B      &hm RALT COMMA   &hm RCTRL A  &hm LALT E  &hm RSHFT I  &hm LGUI H
+        &lt ZMK_L X &kp F        &kp L       &kp C        &kp W           &kp MINUS        &kp U        &kp O       &kp Y        &lt ZMK_L K
+                                    &mt LSHFT BSPC  &lt SYM_L T           &lt NUM_L SPACE  &lt NAV_L ENTER
+        >;
+    };
+
+    hdg_mac_layer {
+      bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &kp DQT  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans
+                                &trans  &trans    &trans  &trans
+        >;
+    };
+
+    game_base_layer {
       bindings = <
         &kp Q  &kp W  &kp E  &kp R  &kp T          &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
         &kp A  &kp S  &kp D  &kp F  &kp G          &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
@@ -157,9 +189,9 @@
 
     nav_layer {
       bindings = <
-        &trans      &trans         &trans         &trans       &trans            &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
-        &trans      &trans         &trans         &trans       &trans            &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
-        &tog MAC_L  &to COLEMAK_L  &to COLEMAK_L  &to DEFAULT  &to GAME_L        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
+        &trans      &trans      &trans         &trans       &trans            &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
+        &trans      &trans      &trans         &trans       &trans            &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
+        &tog MAC_L  &to HDG_L   &to COLEMAK_L  &to DEFAULT  &to GAME_L        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
                                                   &trans       &trans            &trans      &trans
         >;
     };
