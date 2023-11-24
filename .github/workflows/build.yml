@@ -1,4 +1,10 @@
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    # Rebuild default branch (main/master) to catch upstream changes to ZMK.
+    - cron: '0 0 1,15 * *'
 
 jobs:
   build:
