@@ -57,6 +57,19 @@
       key-positions = <26 28>;
       bindings = <&kp UNDER>;
     };
+
+    // HandsDown Gold
+    combo_z {
+      timeout-ms = <50>;
+      key-positions = <20 23>;  /* Should be `0 1` but mimicking `Q`*/
+      bindings = <&kp Z>;
+    };
+    combo_q {
+      timeout-ms = <50>;
+      key-positions = <26 29>;
+      bindings = <&kp Q>;
+    };
+
     // Brackets
     combo_left_curly_bracket {
       timeout-ms = <50>;
