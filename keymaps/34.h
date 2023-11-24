@@ -90,6 +90,20 @@
 };
 
 / {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        mac_numbers_layer {
+            if-layers = <1 5>;
+            then-layer = <6>;
+        };
+        mac_symbols_layer {
+            if-layers = <1 7>;
+            then-layer = <8>;
+        };
+    };
+};
+
+/ {
   behaviors {
   hm: homerow_mods {
       compatible = "zmk,behavior-hold-tap";
