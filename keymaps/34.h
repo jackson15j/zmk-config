@@ -47,12 +47,12 @@
     };
     combo_tab {
       timeout-ms = <50>;
-      key-positions = <22 23>;
+      key-positions = <21 23>;
       bindings = <&kp TAB>;
     };
     combo_underscore {
       timeout-ms = <50>;
-      key-positions = <26 27>;
+      key-positions = <26 28>;
       bindings = <&kp UNDER>;
     };
   };
