@@ -55,6 +55,37 @@
       key-positions = <26 28>;
       bindings = <&kp UNDER>;
     };
+    // Brackets
+    combo_left_curly_bracket {
+      timeout-ms = <50>;
+      key-positions = <2 3>;
+      bindings = <&kp LBRC>;  // {
+    };
+    combo_left_parenthesis {
+      timeout-ms = <50>;
+      key-positions = <12 13>;
+      bindings = <&kp LPAR>;  // (
+    };
+    combo_left_square_bracket {
+      timeout-ms = <50>;
+      key-positions = <22 23>;
+      bindings = <&kp LBKT>;  // [
+    };
+    combo_right_curly_bracket {
+      timeout-ms = <50>;
+      key-positions = <6 7>;
+      bindings = <&kp RBRC>;  // }
+    };
+    combo_right_parenthesis {
+      timeout-ms = <50>;
+      key-positions = <16 17>;
+      bindings = <&kp RPAR>;  // )
+    };
+    combo_right_square_bracket {
+      timeout-ms = <50>;
+      key-positions = <26 27>;
+      bindings = <&kp RBKT>;  // ]
+    };
   };
 };
 
