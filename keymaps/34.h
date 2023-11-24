@@ -90,6 +90,20 @@
 };
 
 / {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        mac_numbers_layer {
+            if-layers = <1 5>;
+            then-layer = <6>;
+        };
+        mac_symbols_layer {
+            if-layers = <1 7>;
+            then-layer = <8>;
+        };
+    };
+};
+
+/ {
   behaviors {
   hm: homerow_mods {
       compatible = "zmk,behavior-hold-tap";
@@ -104,7 +118,7 @@
   keymap {
     compatible = "zmk,keymap";
 
-    default_layer {
+    default_base_layer {
       bindings = <
         &kp Q       &kp W        &kp E       &kp R        &kp T               &kp Y       &kp U        &kp I       &kp O        &kp P
         &hm LGUI A  &hm LSHFT S  &hm LALT D  &hm LCTRL F  &hm RALT G          &hm RALT H  &hm RCTRL J  &hm LALT K  &hm RSHFT L  &hm LGUI SEMI
@@ -113,16 +127,17 @@
         >;
     };
 
-    mac_layer {
+    // Momentary toggle of the default layer to trigger Conditional Layer changes on symbols/number layers.
+    mac_override_layer {
       bindings = <
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
-                   &trans  &lt SYM_MAC_L SPACE      &lt NUM_MAC_L SPACE  &trans
+                                &trans  &trans      &trans  &trans
         >;
     };
 
-    colemak_layer {
+    colemak_base_layer {
       bindings = <
         &kp Q       &kp W        &kp F       &kp P        &kp G               &kp J       &kp L        &kp U       &kp Y        &kp SEMI
         &hm LGUI A  &hm LSHFT R  &hm LALT S  &hm LCTRL T  &hm RALT D          &hm RALT H  &hm RCTRL N  &hm LALT E  &hm RSHFT I  &hm LGUI O
@@ -131,7 +146,7 @@
         >;
     };
 
-    game_layer {
+    game_base_layer {
       bindings = <
         &kp Q  &kp W  &kp E  &kp R  &kp T          &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
         &kp A  &kp S  &kp D  &kp F  &kp G          &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
@@ -160,10 +175,10 @@
 
     num_mac_layer {
       bindings = <
-        &kp EXCL  &kp DQT &kp LS(N3)  &kp DLLR  &kp PRCNT       &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR
-        &kp N1    &kp N2  &kp N3      &kp N4    &kp N5          &kp N6     &kp N7    &kp N8    &kp N9    &kp N0
-        &kp F1    &kp F2  &kp F3      &kp F4    &kp F5          &kp F6     &kp F7    &kp F8    &kp DOT   &kp F12
-                                      &trans    &trans          &trans     &trans
+        &trans  &kp DQT  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+        &trans  &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+        &trans  &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+                                 &trans  &trans      &trans  &trans
         >;
     };
 
@@ -178,10 +193,10 @@
 
     sym_mac_layer {
       bindings = <
-        &kp EXCL  &kp DQT   &kp LS(N3)  &kp DLLR   &kp PRCNT          &kp CARET   &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR
-        &kp LBRC  &kp LBKT  &kp LPAR    &kp MINUS  &kp NON_US_BSLH    &kp LA(N3)  &kp UNDER  &kp RPAR   &kp RBKT   &kp RBRC
-        &kp AT    &kp PLUS  &kp PIPE    &kp BSLH   &kp SQT            &kp PIPE2   &kp FSLH   &kp EQUAL  &kp QMARK  &kp FSLH
-                                        &trans     &trans             &trans      &trans
+        &trans  &kp DQT  &trans     &trans     &trans             &trans      &trans  &trans  &trans  &trans
+        &trans  &trans   &trans     &trans     &kp NON_US_BSLH    &kp LA(N3)  &trans  &trans  &trans  &trans
+        &kp AT  &trans   &kp PIPE   &kp BSLH   &trans             &kp PIPE    &trans  &trans  &trans  &trans
+                                    &trans     &trans             &trans      &trans
         >;
     };
 
