@@ -118,7 +118,7 @@
   keymap {
     compatible = "zmk,keymap";
 
-    default_base_layer {
+    default_layer {
       bindings = <
         &kp Q       &kp W        &kp E       &kp R        &kp T               &kp Y       &kp U        &kp I       &kp O        &kp P
         &hm LGUI A  &hm LSHFT S  &hm LALT D  &hm LCTRL F  &hm RALT G          &hm RALT H  &hm RCTRL J  &hm LALT K  &hm RSHFT L  &hm LGUI SEMI
@@ -128,7 +128,7 @@
     };
 
     // Momentary toggle of the default layer to trigger Conditional Layer changes on symbols/number layers.
-    mac_override_layer {
+    mac_layer {
       bindings = <
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
@@ -137,7 +137,7 @@
         >;
     };
 
-    colemak_base_layer {
+    colemak_layer {
       bindings = <
         &kp Q       &kp W        &kp F       &kp P        &kp G               &kp J       &kp L        &kp U       &kp Y        &kp SEMI
         &hm LGUI A  &hm LSHFT R  &hm LALT S  &hm LCTRL T  &hm RALT D          &hm RALT H  &hm RCTRL N  &hm LALT E  &hm RSHFT I  &hm LGUI O
@@ -146,7 +146,7 @@
         >;
     };
 
-    game_base_layer {
+    game_layer {
       bindings = <
         &kp Q  &kp W  &kp E  &kp R  &kp T          &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
         &kp A  &kp S  &kp D  &kp F  &kp G          &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
