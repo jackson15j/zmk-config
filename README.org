@@ -1,3 +1,5 @@
+#+OPTIONS: \n:nil toc:nil num:nil html-postamble:nil
+#+PROPERTY: header-args:shell :prologue "exec 2>&1" :epilogue ":" :results drawer :async
 * ZMK Config
 
 My personal ZMK CONFIG's for my keyboards.
@@ -20,6 +22,36 @@ Distilled from: [[https://zmk.dev/docs/development/setup][ZMK Docs: Toolchain Se
   - Subsequent builds in the container:
     - ~cd /app~
     - ~west build -p -d build/cradio/right/ --board nice_nano -- -DSHIELD=cradio_right -DZMK_CONFIG=/zmk-config/config && west build -p -d build/cradio/left/ --board nice_nano -- -DSHIELD=cradio_left -DZMK_CONFIG=/zmk-config/config && west build -p -d build/ferris --board ferris_rev02 -- -DZMK_CONFIG=/zmk-config/config~
+
+*** Org codeblock to initialise the =zmk= docker container:
+
+#+BEGIN_SRC shell :var zmk_path="../zmk"
+  echo "- Get ZMK source to mount into container..."
+  git clone https://github.com/zmkfirmware/zmk.git $zmk_path || true
+  cd $zmk_path
+  git pull
+  cd -
+
+  echo "- Initialise a Docker Container that will be modified..."
+  docker run --name zmk -v $PWD/$zmk_path/app/:/app -v $PWD:/zmk-config zmkfirmware/zmk-build-arm:stable sleep infinity
+
+  docker stop zmk
+  docker start zmk
+
+  echo "- Initial setup in the container..."
+  docker exec zmk west init -l /app
+  docker exec zmk west update
+  docker exec zmk west zephyr-export
+#+END_SRC
+
+*** Org codeblock to build firmware's in the =zmk= docker container:
+
+#+BEGIN_SRC shell :var zmk_path="../zmk"
+  echo "- Subsequent builds in the container..."
+  docker exec zmk west build -p -s /app -d build/cradio/right/ --board nice_nano -- -DSHIELD=cradio_right -DZMK_CONFIG=/zmk-config/config
+  docker exec zmk west build -p -s /app -d build/cradio/left/ --board nice_nano -- -DSHIELD=cradio_left -DZMK_CONFIG=/zmk-config/config
+  docker exec zmk west build -p -s /app -d build/ferris --board ferris_rev02 -- -DZMK_CONFIG=/zmk-config/config
+#+END_SRC
 
 ** flashing:
 
