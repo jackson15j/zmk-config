@@ -40,18 +40,6 @@
       key-positions = <0 1>;
       bindings = <&kp ESC>;
     };
-    combo_speech_mark {
-      layers = <0 2>;  // DEFAULT/COLEMAK_L
-      timeout-ms = <50>;
-      key-positions = <2 3>;
-      bindings = <&kp AT>;
-    };
-    combo_speech_mark_mac {
-      layers = <1>;  // MAC_L
-      timeout-ms = <50>;
-      key-positions = <2 3>;
-      bindings = <&kp AT>;
-    };
     combo_del {
       timeout-ms = <50>;
       key-positions = <20 21>;
