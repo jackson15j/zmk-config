@@ -64,6 +64,15 @@ USB Storage devices (eg. nice!nano):
 
 - Mac doesn't auto-mount FAT16 external drives. Therefore:
   - ~sudo mount -t msdos /dev/disk<#> </mount/path>~
+
+  #+BEGIN_SRC shell :var zmk_path="../zmk"
+    echo "- Double-tap GND & RST now!!"
+    mkdir -p ~/Downloads/mounted_keyboard
+    echo "- NOTE: hardcoding to /dev/disk4 for my mac."
+    sleep 10; ls -al /dev/disk*; sudo mount -t msdos /dev/disk4 Downloads/mounted_keyboard
+    echo "- Copy .uf2 file to mounted Nice!Nano now."
+  #+END_SRC
+
 - All:
   - ~cp </path/to/build/<shield>/<side>/zephyr/zmk.uf2> </mount/path>~.
   - Unplug after device unmounts itself.
