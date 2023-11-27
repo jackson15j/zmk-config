@@ -240,7 +240,7 @@
       bindings = <
         &trans  &kp DQT  &trans     &trans     &trans             &trans      &trans  &trans  &trans  &trans
         &trans  &trans   &trans     &trans     &kp NON_US_BSLH    &kp LA(N3)  &trans  &trans  &trans  &trans
-        &kp AT  &trans   &kp PIPE   &kp BSLH   &trans             &kp PIPE    &trans  &trans  &trans  &trans
+        &kp AT  &trans   &kp PIPE   &kp BSLH   &trans             &kp PIPE2   &trans  &trans  &trans  &trans
                                     &trans     &trans             &trans      &trans
         >;
     };
