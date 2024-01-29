@@ -57,7 +57,7 @@ Distilled from: [[https://zmk.dev/docs/development/setup][ZMK Docs: Toolchain Se
   docker exec zmk west build -p -s /app -d /app/build/ferris --board ferris_rev02 -- -DZMK_CONFIG=/zmk-config/config
 
   echo "- Copy files to root of build/ ..."
-  docker exec zmk rm -rf /app/build/*.uf2 /app/build/*.bin
+  docker exec zmk rm -rf /app/build/*.uf2 /app/build/*.bin || true
   docker exec zmk cp /app/build/cradio/left/zephyr/zmk.uf2 /app/build/cradio_left.uf2
   docker exec zmk cp /app/build/cradio/right/zephyr/zmk.uf2 /app/build/cradio_right.uf2
   docker exec zmk cp /app/build/ferris/zephyr/zmk.bin /app/build/ferris.bin
