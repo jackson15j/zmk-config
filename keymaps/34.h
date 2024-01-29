@@ -70,35 +70,37 @@
       bindings = <&kp Q>;
     };
 
-    // Brackets
+    // Brackets - moving these from index+middle finger, to
+    // thumb(right SPC)+finger, as an experiment to see if they are
+    // both: comfortable + avoid accidental rolling.
     combo_left_curly_bracket {
       timeout-ms = <50>;
-      key-positions = <2 3>;
+      key-positions = <6 32>;
       bindings = <&kp LBRC>;  // {
     };
     combo_left_parenthesis {
       timeout-ms = <50>;
-      key-positions = <12 13>;
+      key-positions = <16 32>;
       bindings = <&kp LPAR>;  // (
     };
     combo_left_square_bracket {
       timeout-ms = <50>;
-      key-positions = <22 23>;
+      key-positions = <26 32>;
       bindings = <&kp LBKT>;  // [
     };
     combo_right_curly_bracket {
       timeout-ms = <50>;
-      key-positions = <6 7>;
+      key-positions = <7 32>;
       bindings = <&kp RBRC>;  // }
     };
     combo_right_parenthesis {
       timeout-ms = <50>;
-      key-positions = <16 17>;
+      key-positions = <17 32>;
       bindings = <&kp RPAR>;  // )
     };
     combo_right_square_bracket {
       timeout-ms = <50>;
-      key-positions = <26 27>;
+      key-positions = <27 32>;
       bindings = <&kp RBKT>;  // ]
     };
   };
