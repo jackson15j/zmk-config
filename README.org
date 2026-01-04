@@ -23,6 +23,39 @@ Distilled from: [[https://zmk.dev/docs/development/setup][ZMK Docs: Toolchain Se
     - ~cd /app~
     - ~west build -p -d build/cradio/right/ --board nice_nano -- -DSHIELD=cradio_right -DZMK_CONFIG=/zmk-config/config && west build -p -d build/cradio/left/ --board nice_nano -- -DSHIELD=cradio_left -DZMK_CONFIG=/zmk-config/config && west build -p -d build/ferris --board ferris_rev02 -- -DZMK_CONFIG=/zmk-config/config~
 
+*** Org codeblock to initialise the =zmk= DevContainer:
+
+See: [[https://zmk.dev/docs/development/local-toolchain/setup/container?container=cli][zmk docs: local toolchain > container setup]].
+
+#+BEGIN_SRC shell :var zmk_path="../zmk"
+  ZMK_CONFIG_PATH="$zmk_path/../zmk-config/"
+  LABEL=zmk-dev
+
+  echo "- Get ZMK source to mount into container..."
+  git clone https://github.com/zmkfirmware/zmk.git $zmk_path || true
+  cd $zmk_path
+  git pull
+  cd -
+
+  echo "- Get DevContainer installed..."
+  brew install devcontainer
+
+  echo "- create mount point for my config..."
+  docker volume create --driver local -o o=bind -o type=none \
+    -o device=$ZMK_CONFIG_PATH zmk-config
+
+  echo "- Initial setup in the container..."
+  devcontainer up --id-label=$LABEL --workspace-folder "$zmk_path"
+
+  echo "- Initial setup in the container..."
+  docker exec --id-label=$LABEL west init -l /app
+  docker exec --id-label=$LABEL west update
+  # docker exec --id-label=$LABEL west zephyr-export
+
+  # echo "- Install LSP Server (clangd) for emacs..."
+  # docker exec --id-label=$LABEL pip3 install pre-commit
+#+END_SRC
+
 *** Org codeblock to initialise the =zmk= docker container:
 
 #+BEGIN_SRC shell :var zmk_path="../zmk"
