@@ -46,6 +46,7 @@ Distilled from: [[https://zmk.dev/docs/development/setup][ZMK Docs: Toolchain Se
   echo "- Install LSP Server (clangd) for emacs..."
   docker exec zmk apt-get update
   docker exec zmk apt-get -y install clangd
+  docker exec zmk pip3 install pre-commit
 #+END_SRC
 
 *** Org codeblock to build firmware's in the =zmk= docker container:
