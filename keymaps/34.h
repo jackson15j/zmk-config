@@ -208,7 +208,7 @@
      */
     steno_layer {
       bindings = <
-        &kp N1  &kp N2  &kp N3  &kp N4  &kp N5          &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
+        &kp N1  &kp N2  &kp N3  &kp N4  &kp N5          &kp N6  &kp N7  &kp N8  &kp N9  &to DEFAULT
         &kp S   &kp T   &kp P   &kp H   &kp STAR        &kp F   &kp P   &kp L   &kp T   &kp D
         &kp S   &kp K   &kp W   &kp R   &kp STAR        &kp R   &kp B   &kp G   &kp S   &kp Z
                                 &kp A   &kp O           &kp E   &kp U
@@ -217,7 +217,7 @@
 
     steno_mac_layer {
       bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &kp DQT  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans
                                 &trans  &trans    &trans  &trans
