@@ -123,6 +123,10 @@
             if-layers = <1 9>;
             then-layer = <10>;
         };
+        mac_steno_layer {
+            if-layers = <1 12>;
+            then-layer = <13>;
+        };
     };
 };
 
