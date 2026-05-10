@@ -23,15 +23,15 @@
 #define COLEMAK_L 2  /* Colemak Mod-DH: https://colemakmods.github.io/mod-dh/ */
 #define HDG_L 3  /* HandsDown-Gold: https://sites.google.com/alanreiser.com/handsdown/home/hands-down-neu#h.8i2msuo3butx */
 #define HDG_MAC_L 4
-#define GAME_L 5
-#define NAV_L 6
-#define NUM_L 7
-#define NUM_MAC_L 8
-#define SYM_L 9
-#define SYM_MAC_L 10
-#define ZMK_L 11
-#define STENO_L 12
-#define STENO_MAC_L 13
+#define STENO_L 5
+#define STENO_MAC_L 6
+#define GAME_L 7
+#define NAV_L 8
+#define NUM_L 9
+#define NUM_MAC_L 10
+#define SYM_L 11
+#define SYM_MAC_L 12
+#define ZMK_L 13
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -115,17 +115,17 @@
             if-layers = <1 3>;
             then-layer = <4>;
         };
-        mac_numbers_layer {
-            if-layers = <1 7>;
-            then-layer = <8>;
+        mac_steno_layer {
+            if-layers = <1 5>;
+            then-layer = <6>;
         };
-        mac_symbols_layer {
+        mac_numbers_layer {
             if-layers = <1 9>;
             then-layer = <10>;
         };
-        mac_steno_layer {
-            if-layers = <1 12>;
-            then-layer = <13>;
+        mac_symbols_layer {
+            if-layers = <1 11>;
+            then-layer = <12>;
         };
     };
 };
