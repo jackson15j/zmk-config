@@ -13,8 +13,8 @@
 #
 ---
 include:
-  - board: ferris
-  - board: nice_nano
+  - board: ferris//zmk
+  - board: nice_nano//zmk
     shield: cradio_left  # Sweep
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: cradio_right  # Sweep
