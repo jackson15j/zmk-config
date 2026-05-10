@@ -27,9 +27,12 @@ Distilled from: [[https://zmk.dev/docs/development/setup][ZMK Docs: Toolchain Se
 
 See: [[https://zmk.dev/docs/development/local-toolchain/setup/container?container=cli][zmk docs: local toolchain > container setup]].
 
-#+BEGIN_SRC shell :var zmk_path="../zmk"
-  ZMK_CONFIG_PATH="$zmk_path/../zmk-config/"
-  LABEL=zmk-dev
+#+NAME:pre-reqs
+#+BEGIN_SRC shell :dir . :var zmk_path="../zmk" :var zmk_config_path=(file-name-directory (buffer-file-name))
+  ZMK_CONFIG_PATH=$zmk_config_path
+  echo "$PWD"
+  echo "$zmk_path"
+  echo "$zmk_config_path"
 
   echo "- Get ZMK source to mount into container..."
   git clone https://github.com/zmkfirmware/zmk.git $zmk_path || true
@@ -39,21 +42,31 @@ See: [[https://zmk.dev/docs/development/local-toolchain/setup/container?containe
 
   echo "- Get DevContainer installed..."
   brew install devcontainer
+#+END_SRC
 
+#+BEGIN_SRC shell :dir . :var zmk_path="../zmk" :var zmk_config_path=(file-name-directory (buffer-file-name))
+  LABEL="ci-container=zmk-dev"
   echo "- create mount point for my config..."
+  # docker rm -f zmk-dev
+  docker volume rm -f zmk-config
   docker volume create --driver local -o o=bind -o type=none \
-    -o device=$ZMK_CONFIG_PATH zmk-config
+    -o device=$zmk_config_path zmk-config
 
   echo "- Initial setup in the container..."
-  devcontainer up --id-label=$LABEL --workspace-folder "$zmk_path"
+  devcontainer up \
+               --remove-existing-container=true \
+               --id-label=$LABEL \
+               --workspace-folder "$zmk_path"
+               # --mount type=volume,source=$zmk_config_path,target=/workspaces/zmk-config \
 
   echo "- Initial setup in the container..."
-  docker exec --id-label=$LABEL west init -l /app
-  docker exec --id-label=$LABEL west update
-  # docker exec --id-label=$LABEL west zephyr-export
+  # devcontainer exec --id-label=$LABEL west init -l /workspaces/zmk/app/
+  # devcontainer exec --id-label=$LABEL sh -c 'cd /workspaces/zmk/ && west update'
+  devcontainer exec --id-label=$LABEL sh -c 'cd /workspaces/zmk/ && west init -l app/; west update'
+  # devcontainer exec --id-label=$LABEL west zephyr-export
 
   # echo "- Install LSP Server (clangd) for emacs..."
-  # docker exec --id-label=$LABEL pip3 install pre-commit
+  # devcontainer exec --id-label=$LABEL pip3 install pre-commit
 #+END_SRC
 
 *** Org codeblock to initialise the =zmk= docker container:
