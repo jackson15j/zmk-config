@@ -30,6 +30,8 @@
 #define SYM_L 9
 #define SYM_MAC_L 10
 #define ZMK_L 11
+#define STENO_L 12
+#define STENO_MAC_L 13
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -193,6 +195,31 @@
         >;
     };
 
+    /*
+      Steno (Plover)
+      1 2 3 4 5  6 7 8 9 0
+      s t p h *  f p l t d
+      s k w r *  r b g s z
+            a o  e u
+     */
+    steno_layer {
+      bindings = <
+        &kp N1  &kp N2  &kp N3  &kp N4  &kp N5          &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
+        &kp S   &kp T   &kp P   &kp H   &kp STAR        &kp F   &kp P   &kp L   &kp T   &kp D
+        &kp S   &kp K   &kp W   &kp R   &kp STAR        &kp R   &kp B   &kp G   &kp S   &kp Z
+                                &kp A   &kp O           &kp E   &kp U
+        >;
+    };
+
+    steno_mac_layer {
+      bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &kp DQT  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans
+                                &trans  &trans    &trans  &trans
+        >;
+    };
+
     game_base_layer {
       bindings = <
         &kp Q  &kp W  &kp E  &kp R  &kp T          &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
@@ -205,7 +232,7 @@
     nav_layer {
       bindings = <
         &trans      &trans      &trans         &trans       &trans            &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
-        &trans      &trans      &trans         &trans       &trans            &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
+        &trans      &trans      &trans         &trans       &to STENO_L       &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
         &tog MAC_L  &to HDG_L   &to COLEMAK_L  &to DEFAULT  &to GAME_L        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
                                                   &trans       &trans            &trans      &trans
         >;
