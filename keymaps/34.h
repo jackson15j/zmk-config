@@ -25,13 +25,14 @@
 #define HDG_MAC_L 4
 #define STENO_L 5
 #define STENO_MAC_L 6
-#define GAME_L 7
-#define NAV_L 8
-#define NUM_L 9
-#define NUM_MAC_L 10
-#define SYM_L 11
-#define SYM_MAC_L 12
-#define ZMK_L 13
+#define STENO_INNER_DZ_L 7
+#define GAME_L 8
+#define NAV_L 9
+#define NUM_L 10
+#define NUM_MAC_L 11
+#define SYM_L 12
+#define SYM_MAC_L 13
+#define ZMK_L 14
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -120,12 +121,12 @@
             then-layer = <6>;
         };
         mac_numbers_layer {
-            if-layers = <1 9>;
-            then-layer = <10>;
+            if-layers = <1 10>;
+            then-layer = <11>;
         };
         mac_symbols_layer {
-            if-layers = <1 11>;
-            then-layer = <12>;
+            if-layers = <1 12>;
+            then-layer = <13>;
         };
     };
 };
@@ -235,6 +236,23 @@
         >;
     };
 
+    /*
+      Steno (Plover)
+      1 2 3 4 5  0 6 7 8 9
+      s t p h *  d f p l t
+      s k w r *  z r b g s
+            a o  e u
+     */
+    // Shifted down 1 QWERTY + Move DZ to inner column - for Plover
+    steno_inner_dz_layer {
+      bindings = <
+        &kp N1  &kp N2  &kp N3  &kp N4  &kp N5       &to DEFAULT  &kp N6  &kp N7  &kp N8  &kp N9
+        &kp Q   &kp W   &kp E   &kp R   &kp T        &kp P        &kp Y   &kp U   &kp I   &kp O
+        &kp A   &kp S   &kp D   &kp F   &kp G        &kp SEMI     &kp H   &kp J   &kp K   &kp L
+                                &kp C   &kp V        &kp N        &kp M
+        >;
+    };
+
     game_base_layer {
       bindings = <
         &kp Q  &kp W  &kp E  &kp R  &kp T          &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
@@ -247,7 +265,7 @@
     nav_layer {
       bindings = <
         &trans      &trans      &trans         &trans       &trans            &trans      &kp PG_UP     &kp UP        &kp PG_DN  &kp DEL
-        &trans      &trans      &trans         &trans       &to STENO_L       &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
+        &trans      &trans      &trans &to STENO_INNER_DZ_L &to STENO_L       &kp HOME    &kp LEFT      &kp DOWN      &kp RIGHT  &kp END
         &tog MAC_L  &to HDG_L   &to COLEMAK_L  &to DEFAULT  &to GAME_L        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp INS    &kp PSCRN
                                                   &trans       &trans            &trans      &trans
         >;
