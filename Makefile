@@ -1,8 +1,8 @@
 ZMK_CONFIG_PATH:=$(HOME)/github_repos/zmk-config/config/
-ZMK_PATH:=$(HOME)/github_forks/zmk/
+ZMK_PATH:=$(HOME)/github_repos/zmk/
 
 
-pre_req:=. $(ZMK_PATH).venv/bin/activate; cd $(ZMK_PATH)app/;
+pre_req:=source $(ZMK_PATH).venv/bin/activate; cd $(ZMK_PATH)app/; pip install west;
 
 prep_zmk: ;
 	$(pre_req) \
