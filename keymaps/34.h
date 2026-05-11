@@ -43,21 +43,25 @@
     combo_esc {
       timeout-ms = <50>;
       key-positions = <0 1>;
+      layers = <0 1 2 3 4 5 8>;
       bindings = <&kp ESC>;
     };
     combo_del {
       timeout-ms = <50>;
       key-positions = <20 21>;
+      layers = <0 1 2 3 4 5>;
       bindings = <&kp DEL>;
     };
     combo_tab {
       timeout-ms = <50>;
       key-positions = <21 23>;
+      layers = <0 1 2 3 4 5>;
       bindings = <&kp TAB>;
     };
     combo_underscore {
       timeout-ms = <50>;
       key-positions = <26 28>;
+      layers = <0 1 2 3 4 5>;
       bindings = <&kp UNDER>;
     };
 
@@ -65,11 +69,13 @@
     combo_z {
       timeout-ms = <50>;
       key-positions = <20 23>;  /* Should be `0 1` but mimicking `Q`*/
+      layers = <3 4 >;
       bindings = <&kp Z>;
     };
     combo_q {
       timeout-ms = <50>;
       key-positions = <26 29>;
+      layers = <3 4>;
       bindings = <&kp Q>;
     };
 
@@ -79,31 +85,37 @@
     combo_left_curly_bracket {
       timeout-ms = <50>;
       key-positions = <6 32>;
+      layers = <0 1 2 3 4 5>;
       bindings = <&kp LBRC>;  // {
     };
     combo_left_parenthesis {
       timeout-ms = <50>;
       key-positions = <16 32>;
+      layers = <0 1 2 3 4 5>;
       bindings = <&kp LPAR>;  // (
     };
     combo_left_square_bracket {
       timeout-ms = <50>;
       key-positions = <26 32>;
+      layers = <0 1 2 3 4 5>;
       bindings = <&kp LBKT>;  // [
     };
     combo_right_curly_bracket {
       timeout-ms = <50>;
       key-positions = <7 32>;
+      layers = <0 1 2 3 4 5>;
       bindings = <&kp RBRC>;  // }
     };
     combo_right_parenthesis {
       timeout-ms = <50>;
       key-positions = <17 32>;
+      layers = <0 1 2 3 4 5>;
       bindings = <&kp RPAR>;  // )
     };
     combo_right_square_bracket {
       timeout-ms = <50>;
       key-positions = <27 32>;
+      layers = <0 1 2 3 4 5>;
       bindings = <&kp RBKT>;  // ]
     };
   };
