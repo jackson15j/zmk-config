@@ -1,0 +1,111 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+
+&mt {
+    tapping-term-ms = <200>;
+    flavor = "tap-preferred";
+};
+
+&lt {
+    tapping-term-ms = <200>;
+    flavor = "hold-preferred";
+};
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>, <BACKSPACE>, <DELETE>;
+};
+
+#define AS(keycode) &as LS(keycode) keycode
+
+// LAYERS
+#define AL1 0
+#define AL2 1
+#define NUM 2
+#define NAV 3
+#define FUN 4
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_esc {
+            timeout-ms = <30>;
+            key-positions = <16 17>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_enter {
+            timeout-ms = <30>;
+            key-positions = <18 19>;
+            bindings = <&kp ENTER>;
+        };
+    };
+
+    behaviors {
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTO_SHIFT";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+    //  0   1   2   3       4   5   6   7
+    //  8   9   10  11      12  13  14  15
+    //          16  17      18  19
+    keymap {
+        compatible = "zmk,keymap";
+
+        alpha1 {
+            bindings = <
+                &kp Q           &as LC(C) L     &as LC(X) G     &as LC(V) D                 &as LC(Z) H     &as LC(S) U     &as LC(Y) O     &kp SEMI
+                &mt LGUI I      &mt LALT R      &mt LSHIFT S    &mt LCTL T                  &mt RCTL N      &mt RSHIFT E    &mt RALT A      &mt RGUI C
+                                                &lt NAV TAB     &lt AL2 SPC                 &lt NUM BSPC    &lt FUN DEL
+            >;
+        };
+
+        alpha2 {
+            bindings = <
+                &kp SQT         &kp V           &kp W           &kp M                       &kp F           &kp COMMA       &kp Z           &kp FSLH
+                &kp BSLH        &kp J           &mt LSHIFT P    &kp K                       &kp B           &mt LSHIFT DOT  &kp X           &kp Y
+                                                &trans          &trans                      &trans          &trans
+            >;
+        };
+
+        num {
+            bindings = <
+                &kp GRAVE       &kp N1          &kp N2          &kp N3                      &kp N7          &kp N8          &kp N9          &kp N0
+                &none           &kp N4          &mt LSHIFT N5   &kp N6                      &kp EQUAL       &mt LSHIFT LBKT &kp RBKT        &kp MINUS
+                                                &trans          &trans                      &trans          &trans
+            >;
+        };
+
+        nav {
+            bindings = <
+                &none           &none           &kp PG_UP        &none                      &none           &kp UP          &none           &none
+                &none           &mt LALT HOME   &mt LSHIFT PG_DN &mt LCTL END               &mt RCTL LEFT   &mt RSHIFT DOWN &mt RALT RIGHT  &kp RPAR
+                                                &none            &none                      &kp LPAR        &none
+            >;
+        };
+
+        fun {
+            bindings = <
+                &kp PSCRN       &kp F1       &kp F2          &kp F3                         &kp F7           &kp F8         &kp F9          &none
+                &none           &kp F4       &kp F5          &kp F6                         &kp F10          &kp F11        &kp F12         &none
+                                             &none           &none                          &none            &none
+            >;
+        };
+    };
+};
