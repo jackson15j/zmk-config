@@ -213,7 +213,7 @@
         default_layer {
             bindings = <
   &hm LGUI R  &hm LSHFT S  &hm LALT T  &hm LCTRL H       &hm RCTRL N  &hm LALT A  &hm RSHFT I  &hm RGUI O
-  &kp V       &kp C        &kp D       &kp M             &kp L        &kp U       &kp Y        &kp SQT
+  &lt ZMK_L V &kp C        &kp D       &kp M             &kp L        &kp U       &kp Y        &kp SQT
                    &mt LSHFT BSPC  &lt SYM_L SPACE       &lt NUM_L E  &lt NAV_L RET
             >;
         };
@@ -249,7 +249,7 @@
 
             bindings = <
   &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &sys_reset      &bootloader   &bootloader   &sys_reset    &out OUT_USB
-  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4  &bt BT_SEL 5  &bt BT_SEL 6  &bt BT_SEL 7
+  &trans        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5  &bt BT_SEL 6
                               &trans        &trans          &trans &trans
             >;
         };
