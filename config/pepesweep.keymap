@@ -220,25 +220,25 @@
 
         nav_layer {
             bindings = <
-  &kp F1  &kp F2  &kp F3  &kp F4        &kp HOME  &kp UP     &kp END    &kp C_VOL_UP
-  &kp F5  &kp F6  &kp F7  &kp F8        &kp LEFT  &kp DOWN   &kp RIGHT  &kp C_VOL_DOWN
+  &kp F1  &kp F2  &kp F3  &kp F4        &kp HOME  &kp UP    &kp END    &kp C_VOL_UP
+  &kp F5  &kp F6  &kp F7  &kp F8        &kp LEFT  &kp DOWN  &kp RIGHT  &kp C_VOL_DOWN
                   &trans  &trans        &trans    &trans
             >;
         };
 
         num_layer {
             bindings = <
-  &kp AT  &kp DQT  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR
-  &kp N2  &kp N3   &kp N4    &kp N5       &kp N6     &kp N7    &kp N8    &kp N9
-                   &trans    &trans       &trans     &trans
+  &kp AT  &kp DQT  &kp DLLR  &kp PRCNT      &kp CARET  &kp AMPS  &kp STAR  &kp LPAR
+  &kp N2  &kp N3   &kp N4    &kp N5         &kp N6     &kp N7    &kp N8    &kp N9
+                   &trans    &trans         &trans     &trans
             >;
         };
 
         sym_layer {
             bindings = <
-  &kp EXCL  &kp AT    &kp LS(N3)  &kp DLLR   &kp PRCNT  &kp CARET  &kp AMPS   &kp STAR
-  &kp LPAR  &kp RPAR  &kp LBRC    &kp LBKT   &kp LPAR   &kp MINUS  &kp GRAVE  &kp NON_US_HASH
-                   &trans    &trans       &trans     &trans
+  &kp EXCL  &kp AT    &kp LS(N3)  &kp DLLR      &kp PRCNT  &kp CARET  &kp AMPS   &kp STAR
+  &kp LPAR  &kp RPAR  &kp LBRC    &kp LBKT      &kp LPAR   &kp MINUS  &kp GRAVE  &kp NON_US_HASH
+                      &trans      &trans        &trans     &trans
             >;
         };
 
@@ -248,9 +248,9 @@
             // https://zmk.dev/docs/behaviors/reset
 
             bindings = <
-  &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &sys_reset      &bootloader   &bootloader   &sys_reset    &out OUT_USB
-  &trans        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5  &bt BT_SEL 6
-                              &trans        &trans          &trans &trans
+  &bt BT_CLR  &out OUT_BLE  &out OUT_USB  &sys_reset        &bootloader   &bootloader   &sys_reset    &out OUT_USB
+  &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5  &bt BT_SEL 6
+                            &trans        &trans            &trans        &trans
             >;
         };
     };
