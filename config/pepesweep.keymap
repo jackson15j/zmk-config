@@ -89,72 +89,108 @@
 
         combo_left_angle_brackent {
             bindings = <&kp LESS_THAN>;
+            layers = <0>;
             key-positions = <0 8>;
         };
 
         combo_right_angle_brackent {
             bindings = <&kp GREATER_THAN>;
+            layers = <0>;
             key-positions = <7 15>;
         };
 
         combo_w {
             bindings = <&kp W>;
+            layers = <0>;
             key-positions = <0 1>;
         };
 
         combo_p {
             bindings = <&kp P>;
+            layers = <0>;
             key-positions = <1 2>;
         };
 
         combo_b {
             bindings = <&kp B>;
+            layers = <0>;
             key-positions = <2 3>;
         };
 
         combo_f {
             bindings = <&kp F>;
+            layers = <0>;
             key-positions = <3 4>;
         };
 
         combo_q {
             bindings = <&kp Q>;
+            layers = <0>;
             key-positions = <4 5>;
         };
 
         combo_comma {
             bindings = <&kp COMMA>;
+            layers = <0>;
             key-positions = <5 6>;
         };
 
         combo_dot {
             bindings = <&kp DOT>;
+            layers = <0>;
             key-positions = <6 7>;
         };
 
         combo_g {
             bindings = <&kp G>;
+            layers = <0>;
             key-positions = <9 10>;
         };
 
         combo_k {
             bindings = <&kp K>;
+            layers = <0>;
             key-positions = <10 11>;
         };
 
         combo_j {
             bindings = <&kp J>;
+            layers = <0>;
             key-positions = <11 12>;
         };
 
         combo_x {
             bindings = <&kp X>;
+            layers = <0>;
             key-positions = <12 13>;
         };
 
         combo_z {
             bindings = <&kp Z>;
+            layers = <0>;
             key-positions = <13 14>;
+        };
+
+        // Num Layer
+        combo_exclamation_mark {
+            bindings = <&kp EXCL>;
+            layers = <2>;
+            key-positions = <0 3>;
+        };
+        combo_right_parathesis_num_lay {
+            bindings = <&kp RPAR>;
+            layers = <2>;
+            key-positions = <4 7>;
+        };
+        combo_1 {
+            bindings = <&kp N0>;
+            layers = <2>;
+            key-positions = <8 11>;
+        };
+        combo_0 {
+            bindings = <&kp N0>;
+            layers = <2>;
+            key-positions = <12 15>;
         };
     };
 };
