@@ -183,7 +183,7 @@
             key-positions = <4 7>;
         };
         combo_1 {
-            bindings = <&kp N0>;
+            bindings = <&kp N1>;
             layers = <2>;
             key-positions = <8 11>;
         };
