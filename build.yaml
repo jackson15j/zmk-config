@@ -22,3 +22,7 @@ include:
     # cmake-args: -DCONFIG_ZMK_STUDIO=y  # https://zmk.dev/docs/features/studio
   - board: nice_nano//zmk
     shield: cradio_right  # Sweep
+  - board: nice_nano//zmk
+    shield: pepesweep_left
+  - board: nice_nano//zmk
+    shield: pepesweep_right

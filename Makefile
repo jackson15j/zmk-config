@@ -4,6 +4,7 @@ ZMK_PATH:=$(HOME)/github_repos/zmk/
 
 pre_req:=source $(ZMK_PATH).venv/bin/activate; cd $(ZMK_PATH)app/; pip install west;
 
+# NOTE: Trailing slash runs the commands in the same shell/venv!
 prep_zmk: ;
 	$(pre_req) \
 	cd $(ZMK_PATH); \
@@ -15,7 +16,6 @@ prep_zmk: ;
 	west zephyr-export
 
 build_ferris: ;
-	# NOTE: Trailing slash runs the commands in the same shell/venv!
 	$(pre_req) \
 	echo "--- Building Ferris (ARM) board..." &&\
 	west build -p -d build/ferris --board ferris//zmk -- -DZMK_CONFIG=$(ZMK_CONFIG_PATH)
@@ -31,5 +31,13 @@ build_cradio: ;
 	echo "--- Building Cradio (Sweep) RHS shield for Nice!Nano board..." &&\
 	west build -p -d build/cradio/right/ --board nice_nano//zmk -- -DSHIELD=cradio_right -DZMK_CONFIG=$(ZMK_CONFIG_PATH)
 
-build_all: prep_zmk build_ferris build_cradio
+build_pepesweep: ;
+	$(pre_req) \
+	echo "--- Building Pepesweep LHS shield for Nice!Nano board..." &&\
+	west build -p -d build/pepesweep/left/ --board nice_nano//zmk -- -DSHIELD=pepesweep_left -DZMK_CONFIG=$(ZMK_CONFIG_PATH) && \
+	echo "--- Building Pepesweep RHS shield for Nice!Nano board..." &&\
+	west build -p -d build/pepesweep/right/ --board nice_nano//zmk -- -DSHIELD=pepesweep_right -DZMK_CONFIG=$(ZMK_CONFIG_PATH)
+
+build_all: prep_zmk build_ferris build_cradio build_pepesweep
 build_all_34: prep_zmk build_ferris build_cradio
+build_all_20: prep_zmk build_pepesweep
