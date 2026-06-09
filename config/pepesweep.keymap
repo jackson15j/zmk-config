@@ -238,9 +238,9 @@
 
         default_layer {
             bindings = <
-  &hm LGUI R  &hm LSHFT S  &hm LALT T  &hm LCTRL H     &hm RCTRL N      &hm LALT A  &hm RSHFT I  &hm RGUI O
-  &kp V       &kp C        &kp D       &kp M           &kp L            &kp U       &kp Y        &kp SQT
-                                       &mt LSHFT BSPC  &lt SYM_L SPACE              &lt NUM_L E  &lt NAV_L RET
+  &hm LGUI R  &hm LSHFT S  &hm LALT T  &hm LCTRL H       &hm RCTRL N  &hm LALT A  &hm RSHFT I  &hm RGUI O
+  &kp V       &kp C        &kp D       &kp M             &kp L        &kp U       &kp Y        &kp SQT
+                   &mt LSHFT BSPC  &lt SYM_L SPACE       &lt NUM_L E  &lt NAV_L RET
             >;
         };
 
@@ -248,17 +248,17 @@
 
         nav_layer {
             bindings = <
-  &trans     &trans   &trans  &trans    &trans    &trans                &kp PG_UP    &kp UP
-  &kp PG_DN  &kp DEL  &trans  &trans    &trans    &to STENO_INNER_DZ_L  &to STENO_L  &kp HOME
-                              &kp LEFT  &kp DOWN                        &kp RIGHT    &kp END
+  &kp F1  &kp F2  &kp F3  &kp F4        &kp HOME  &kp PG_UP   &kp END    &kp C_VOL_UP
+  &kp F5  &kp F6  &kp F7  &kp F8        &kp LEFT  &kp DOWN    &kp RIGHT  &kp C_VOL_DOWN
+                  &trans  &trans        &trans    &trans
             >;
         };
 
         num_layer {
             bindings = <
-  &kp EXCL  &kp AT    &kp LS(N3)  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp STAR
-  &kp LPAR  &kp RPAR  &kp N1      &kp N2    &kp N3     &kp N4     &kp N5    &kp N6
-                                  &kp N7    &kp N8                &kp N9    &kp N0
+  &kp AT  &kp DQT  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR
+  &kp N2  &kp N3   &kp N4    &kp N5       &kp N6     &kp N7    &kp N8    &kp N9
+                   &trans    &trans       &trans     &trans
             >;
         };
 
@@ -274,9 +274,10 @@
             bindings = <
   &kp EXCL  &kp AT    &kp LS(N3)  &kp DLLR   &kp PRCNT  &kp CARET  &kp AMPS   &kp STAR
   &kp LPAR  &kp RPAR  &kp LBRC    &kp LBKT   &kp LPAR   &kp MINUS  &kp GRAVE  &kp NON_US_HASH
-                                  &kp UNDER  &kp RPAR              &kp RBKT   &kp RBRC
+                   &trans    &trans       &trans     &trans
             >;
         };
+                                  // &kp UNDER  &kp RPAR              &kp RBKT   &kp RBRC
 
   //       sym_mac_layer {
   //           bindings = <
