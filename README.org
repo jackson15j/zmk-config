@@ -141,3 +141,12 @@ USB Storage devices (eg. nice!nano):
   - ~cp </path/to/build/<shield>/<side>/zephyr/zmk.uf2> </mount/path>~.
   - Unplug after device unmounts itself.
   - Power cycle board.
+
+** Layouts:
+*** Sweep:
+
+[[file:keymap-drawer/cradio.svg][Sweep Layout]]
+
+*** Pepesweep:
+
+[[file:keymap-drawer/pepesweep.svg][Pepesweep layout]]
