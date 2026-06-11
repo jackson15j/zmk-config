@@ -1,5 +1,3 @@
 # https://github.com/caksoylar/keymap-drawer/blob/main/CONFIGURATION.md
 parse_config:
-  zmk_additional_includes:
-    - "."
-    - "zephyr"
+  zmk_additional_includes: [".", "zephyr"]
