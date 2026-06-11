@@ -171,6 +171,12 @@
             key-positions = <13 14>;
         };
 
+        combo_caps_word {
+            bindings = <&caps_word>;
+            layers = <0>;
+            key-positions = <2 5>;
+        };
+
         // Num Layer
         combo_exclamation_mark {
             bindings = <&kp EXCL>;
@@ -193,6 +199,11 @@
             key-positions = <12 15>;
         };
     };
+};
+
+// Stay capitalised on underscore/minus in a word.
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
 };
 
 / {
