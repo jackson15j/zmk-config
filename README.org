@@ -145,8 +145,8 @@ USB Storage devices (eg. nice!nano):
 ** Layouts:
 *** Sweep:
 
-[[file:keymap-drawer/cradio.svg][Sweep Layout]]
+[[file:keymap-drawer/cradio.svg]]
 
 *** Pepesweep:
 
-[[file:keymap-drawer/pepesweep.svg][Pepesweep layout]]
+[[file:keymap-drawer/pepesweep.svg]]
