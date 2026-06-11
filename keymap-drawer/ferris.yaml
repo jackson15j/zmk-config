@@ -1,0 +1,564 @@
+layout: {zmk_keyboard: ferris}
+layers:
+  default:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: LGUI}
+  - {t: S, h: LSHFT}
+  - {t: D, h: LALT}
+  - {t: F, h: LCTRL}
+  - {t: G, h: RALT}
+  - {t: H, h: RALT}
+  - {t: J, h: RCTRL}
+  - {t: K, h: LALT}
+  - {t: L, h: RSHFT}
+  - {t: ;, h: LGUI}
+  - {t: Z, h: zmk}
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - {t: /, h: zmk}
+  - {t: BSPC, h: LSHFT}
+  - {t: SPACE, h: sym}
+  - {t: SPACE, h: num}
+  - {t: ENTER, h: nav}
+  mac:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  colemak:
+  - Q
+  - W
+  - F
+  - P
+  - G
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - {t: A, h: LGUI}
+  - {t: R, h: LSHFT}
+  - {t: S, h: LALT}
+  - {t: T, h: LCTRL}
+  - {t: D, h: RALT}
+  - {t: H, h: RALT}
+  - {t: N, h: RCTRL}
+  - {t: E, h: LALT}
+  - {t: I, h: RSHFT}
+  - {t: O, h: LGUI}
+  - {t: Z, h: zmk}
+  - X
+  - C
+  - V
+  - B
+  - K
+  - M
+  - ','
+  - .
+  - {t: /, h: zmk}
+  - {t: BSPC, h: LSHFT}
+  - {t: SPACE, h: sym}
+  - {t: SPACE, h: num}
+  - {t: ENTER, h: nav}
+  hdg:
+  - J
+  - G
+  - M
+  - P
+  - V
+  - ;
+  - .
+  - /
+  - '@'
+  - ''''
+  - {t: R, h: LGUI}
+  - {t: S, h: LSHFT}
+  - {t: N, h: LALT}
+  - {t: D, h: LCTRL}
+  - {t: B, h: RALT}
+  - {t: ',', h: RALT}
+  - {t: A, h: RCTRL}
+  - {t: E, h: LALT}
+  - {t: I, h: RSHFT}
+  - {t: H, h: LGUI}
+  - {t: X, h: zmk}
+  - F
+  - L
+  - C
+  - W
+  - '-'
+  - U
+  - O
+  - Y
+  - {t: K, h: zmk}
+  - {t: BSPC, h: LSHFT}
+  - {t: T, h: sym}
+  - {t: SPACE, h: num}
+  - {t: ENTER, h: nav}
+  hdg_mac:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '"'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  steno:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - {t: default, h: toggle}
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - C
+  - V
+  - N
+  - M
+  steno_mac:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  steno_inner_dz:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - {t: default, h: toggle}
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - P
+  - Y
+  - U
+  - I
+  - O
+  - A
+  - S
+  - D
+  - F
+  - G
+  - ;
+  - H
+  - J
+  - K
+  - L
+  - C
+  - V
+  - N
+  - M
+  game_base:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - {t: ▽, type: trans}
+  - PG UP
+  - UP
+  - PG DN
+  - DEL
+  - A
+  - S
+  - D
+  - F
+  - G
+  - HOME
+  - LEFT
+  - DOWN
+  - RIGHT
+  - END
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - MUTE
+  - VOL DN
+  - VOL UP
+  - INS
+  - PSCRN
+  - LCTRL
+  - {t: SPACE, h: num}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  nav:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PG UP
+  - UP
+  - PG DN
+  - DEL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: steno_inner_dz, h: toggle}
+  - {t: steno, h: toggle}
+  - HOME
+  - LEFT
+  - DOWN
+  - RIGHT
+  - END
+  - {t: mac, h: toggle}
+  - {t: hdg, h: toggle}
+  - {t: colemak, h: toggle}
+  - {t: default, h: toggle}
+  - {t: game_base, h: toggle}
+  - MUTE
+  - VOL DN
+  - VOL UP
+  - INS
+  - PSCRN
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  num:
+  - '!'
+  - '@'
+  - Sft+3
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - .
+  - F12
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  num_mac:
+  - {t: ▽, type: trans}
+  - '"'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  sym:
+  - '!'
+  - '@'
+  - Sft+3
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - '{'
+  - '['
+  - (
+  - '-'
+  - '`'
+  - '#'
+  - _
+  - )
+  - ']'
+  - '}'
+  - '"'
+  - +
+  - '|'
+  - '|'
+  - ''''
+  - '|'
+  - /
+  - '='
+  - '?'
+  - /
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  sym_mac:
+  - {t: ▽, type: trans}
+  - '"'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '|'
+  - Alt+3
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '@'
+  - {t: ▽, type: trans}
+  - '|'
+  - \
+  - {t: ▽, type: trans}
+  - '|'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  zmk:
+  - BT CLR
+  - OUT BLE
+  - OUT USB
+  - '&sys_reset'
+  - '&bootloader'
+  - '&bootloader'
+  - '&sys_reset'
+  - OUT USB
+  - OUT BLE
+  - BT CLR
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - {t: BT, h: '4'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '0'}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [0, 1]
+  k: ESC
+  l: [default, mac, colemak, hdg, hdg_mac, steno, game_base]
+- p: [20, 21]
+  k: DEL
+  l: [default, mac, colemak, hdg, hdg_mac, steno]
+- p: [21, 23]
+  k: TAB
+  l: [default, mac, colemak, hdg, hdg_mac, steno]
+- p: [26, 28]
+  k: _
+  l: [default, mac, colemak, hdg, hdg_mac, steno]
+- p: [20, 23]
+  k: Z
+  l: [hdg, hdg_mac]
+- p: [26, 29]
+  k: Q
+  l: [hdg, hdg_mac]
+- p: [6, 32]
+  k: '{'
+  l: [default, mac, colemak, hdg, hdg_mac, steno]
+- p: [16, 32]
+  k: (
+  l: [default, mac, colemak, hdg, hdg_mac, steno]
+- p: [26, 32]
+  k: '['
+  l: [default, mac, colemak, hdg, hdg_mac, steno]
+- p: [7, 32]
+  k: '}'
+  l: [default, mac, colemak, hdg, hdg_mac, steno]
+- p: [17, 32]
+  k: )
+  l: [default, mac, colemak, hdg, hdg_mac, steno]
+- p: [27, 32]
+  k: ']'
+  l: [default, mac, colemak, hdg, hdg_mac, steno]
