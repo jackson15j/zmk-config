@@ -16,7 +16,7 @@ layers:
   - L
   - U
   - Y
-  - ''''
+  - {t: '''', h: zmk}
   - {t: BSPC, h: LSHFT}
   - {t: SPACE, h: sym}
   - {t: E, h: num}
@@ -89,7 +89,7 @@ layers:
   - OUT BLE
   - OUT USB
   - '&sys_reset'
-  - '&bootloader'
+  - '&sys_reset'
   - '&bootloader'
   - '&sys_reset'
   - OUT USB
@@ -100,7 +100,7 @@ layers:
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
   - {t: BT, h: '5'}
-  - {t: BT, h: '6'}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -109,13 +109,13 @@ combos:
 - p: [0, 3]
   k: ESC
   l: [default]
-- p: [20, 21, 8, 11]
+- p: [8, 11]
   k: DEL
   l: [default]
-- p: [21, 23, 11, 9]
+- p: [9, 11]
   k: TAB
   l: [default]
-- p: [26, 28, 12, 14]
+- p: [12, 14]
   k: _
   l: [default]
 - p: [1, 9]
