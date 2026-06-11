@@ -1,4 +1,5 @@
-#include <physical_layouts.dtsi
+// https://zmk.dev/docs/hardware-integration/physical-layouts
+#include <physical_layouts.dtsi>
 
 / {
     pepesweep_layout: pepesweep_layout {
