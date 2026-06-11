@@ -178,6 +178,9 @@ combos:
 - p: [13, 14]
   k: Z
   l: [default]
+- p: [2, 5]
+  k: '&caps_word'
+  l: [default]
 - p: [0, 3]
   k: '!'
   l: [num]
