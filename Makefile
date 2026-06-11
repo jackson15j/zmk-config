@@ -1,4 +1,5 @@
 ZMK_CONFIG_PATH:=$(HOME)/github_repos/zmk-config/config/
+ZMK_MODULE_PATH:=$(HOME)/github_repos/zmk-config/
 ZMK_PATH:=$(HOME)/github_repos/zmk/
 
 
@@ -34,9 +35,9 @@ build_cradio: ;
 build_pepesweep: ;
 	$(pre_req) \
 	echo "--- Building Pepesweep LHS shield for Nice!Nano board..." &&\
-	west build -p -d build/pepesweep/left/ --board nice_nano//zmk -- -DSHIELD=pepesweep_left -DZMK_CONFIG=$(ZMK_CONFIG_PATH) && \
+	west build -p -d build/pepesweep/left/ --board nice_nano//zmk -- -DSHIELD=pepesweep_left -DZMK_EXTRA_MODULES=$(ZMK_MODULE_PATH) -DZMK_CONFIG=$(ZMK_CONFIG_PATH) && \
 	echo "--- Building Pepesweep RHS shield for Nice!Nano board..." &&\
-	west build -p -d build/pepesweep/right/ --board nice_nano//zmk -- -DSHIELD=pepesweep_right -DZMK_CONFIG=$(ZMK_CONFIG_PATH)
+	west build -p -d build/pepesweep/right/ --board nice_nano//zmk -- -DSHIELD=pepesweep_right -DZMK_EXTRA_MODULES=$(ZMK_MODULE_PATH) -DZMK_CONFIG=$(ZMK_CONFIG_PATH)
 
 build_all: prep_zmk build_ferris build_cradio build_pepesweep
 build_all_34: prep_zmk build_ferris build_cradio

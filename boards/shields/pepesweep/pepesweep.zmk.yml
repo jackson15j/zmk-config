@@ -1,0 +1,11 @@
+file_format: "1"
+id: pepesweep
+name: Pepesweep
+type: shield
+url: https://github.com/XaycMD/pepesweep
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - pepesweep_left
+  - pepesweep_right

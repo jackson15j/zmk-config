@@ -1,0 +1,5 @@
+# https://github.com/zmkfirmware/zmk-module-template/blob/main/zephyr/module.yml
+name: zmk-keyboard-pepesweep
+build:
+  settings:
+    board_root: .

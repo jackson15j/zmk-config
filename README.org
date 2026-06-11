@@ -102,8 +102,8 @@ See: [[https://zmk.dev/docs/development/local-toolchain/setup/container?containe
   docker exec zmk west build -p -s /app -d /app/build/cradio/left/ --board nice_nano -- -DSHIELD=cradio_left -DZMK_CONFIG=/zmk-config/config
   docker exec zmk west build -p -s /app -d /app/build/cradio/right/ --board nice_nano -- -DSHIELD=cradio_right -DZMK_CONFIG=/zmk-config/config
   docker exec zmk west build -p -s /app -d /app/build/ferris --board ferris_rev02 -- -DZMK_CONFIG=/zmk-config/config
-  docker exec zmk west build -p -s /app -d /app/build/pepesweep/left/ --board nice_nano -- -DSHIELD=pepesweep_left -DZMK_CONFIG=/zmk-config/config
-  docker exec zmk west build -p -s /app -d /app/build/pepesweep/right/ --board nice_nano -- -DSHIELD=pepesweep_right -DZMK_CONFIG=/zmk-config/config
+  docker exec zmk west build -p -s /app -d /app/build/pepesweep/left/ --board nice_nano -- -DSHIELD=pepesweep_left -DZMK_EXTRA_MODULES=/zmk-config -DZMK_CONFIG=/zmk-config/config
+  docker exec zmk west build -p -s /app -d /app/build/pepesweep/right/ --board nice_nano -- -DSHIELD=pepesweep_right -DZMK_EXTRA_MODULES=/zmk-config -DZMK_CONFIG=/zmk-config/config
 
   echo "- Copy files to root of build/ ..."
   docker exec zmk rm -rf /app/build/*.uf2 /app/build/*.bin || true
