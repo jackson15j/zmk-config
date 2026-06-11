@@ -5,9 +5,10 @@ on:
   push:               # automatically run on changes to following paths
     paths:
       - "config/*.keymap"
+      - "config/includes/*.h"
       - "config/*.dtsi"
       - "keymap_drawer.config.yaml"
-      # - 'boards/*/*/*.keymap'
+      - 'boards/*/*/*.keymap'
 
 jobs:
   draw:
