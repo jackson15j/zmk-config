@@ -26,21 +26,21 @@
 
         combo_del {
             timeout-ms = <50>;
-            key-positions = <20 21 8 11>;
+            key-positions = <8 11>;
             layers = <0>;
             bindings = <&kp DEL>;
         };
 
         combo_tab {
             timeout-ms = <50>;
-            key-positions = <21 23 11 9>;
+            key-positions = <9 11>;
             layers = <0>;
             bindings = <&kp TAB>;
         };
 
         combo_underscore {
             timeout-ms = <50>;
-            key-positions = <26 28 12 14>;
+            key-positions = <12 14>;
             layers = <0>;
             bindings = <&kp UNDER>;
         };
@@ -224,7 +224,7 @@
         default_layer {
             bindings = <
   &hm LGUI R  &hm LSHFT S  &hm LALT T  &hm LCTRL H       &hm RCTRL N  &hm LALT A  &hm RSHFT I  &hm RGUI O
-  &lt ZMK_L V &kp C        &kp D       &kp M             &kp L        &kp U       &kp Y        &kp SQT
+  &lt ZMK_L V &kp C        &kp D       &kp M             &kp L        &kp U       &kp Y        &lt ZMK_L SQT
                    &mt LSHFT BSPC  &lt SYM_L SPACE       &lt NUM_L E  &lt NAV_L RET
             >;
         };
@@ -259,8 +259,8 @@
             // https://zmk.dev/docs/behaviors/reset
 
             bindings = <
-  &bt BT_CLR  &out OUT_BLE  &out OUT_USB  &sys_reset        &bootloader   &bootloader   &sys_reset    &out OUT_USB
-  &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5  &bt BT_SEL 6
+  &bt BT_CLR  &out OUT_BLE  &out OUT_USB  &sys_reset        &sys_reset    &bootloader   &sys_reset    &out OUT_USB
+  &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5  &trans
                             &trans        &trans            &trans        &trans
             >;
         };
