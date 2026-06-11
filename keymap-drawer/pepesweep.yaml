@@ -1,4 +1,4 @@
-layout: {zmk_keyboard: pepesweep}
+layout: {dts_layout: boards/shields/pepesweep/pepesweep.dtsi}
 layers:
   default:
   - {t: R, h: LGUI}
