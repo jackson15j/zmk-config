@@ -16,4 +16,4 @@
  * ^^ above path can be seen under the 'nice!nano v2' entry in System Information's USB section.
  */
 
-#include "../keymaps/34.h"
+#include "includes/34.h"
