@@ -1,6 +1,4 @@
-layout:
-  default_transform:
-    ortho_layout: {split: true, rows: 2, columns: 4, thumbs: 2}
+layout: {zmk_keyboard: pepesweep-xaycmd}
 layers:
   alpha1:
   - Q
