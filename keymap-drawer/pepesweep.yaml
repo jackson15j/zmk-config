@@ -1,4 +1,6 @@
-layout: {zmk_keyboard: pepesweep}
+layout:
+  default_transform:
+    ortho_layout: {split: true, rows: 2, columns: 4, thumbs: 2}
 layers:
   default:
   - {t: R, h: LGUI}
