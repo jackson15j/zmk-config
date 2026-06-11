@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: pepesweep}
 layers:
-  default:
+  Default:
   - {t: R, h: LGUI}
   - {t: S, h: LSHFT}
   - {t: T, h: LALT}
@@ -9,19 +9,19 @@ layers:
   - {t: A, h: LALT}
   - {t: I, h: RSHFT}
   - {t: O, h: RGUI}
-  - {t: V, h: zmk}
+  - {t: V, h: ZMK}
   - C
   - D
   - M
   - L
   - U
   - Y
-  - {t: '''', h: zmk}
+  - {t: '''', h: ZMK}
   - {t: BSPC, h: LSHFT}
-  - {t: SPACE, h: sym}
-  - {t: E, h: num}
-  - {t: RET, h: nav}
-  nav:
+  - {t: SPACE, h: Symbols}
+  - {t: E, h: Numbers}
+  - {t: RET, h: Navigation}
+  Navigation:
   - F1
   - F2
   - F3
@@ -42,7 +42,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  num:
+  Numbers:
   - '@'
   - '"'
   - $
@@ -63,7 +63,7 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  sym:
+  Symbols:
   - '!'
   - '@'
   - Sft+3
@@ -84,7 +84,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  zmk:
+  ZMK:
   - BT CLR
   - OUT BLE
   - OUT USB
@@ -108,88 +108,88 @@ layers:
 combos:
 - p: [0, 3]
   k: ESC
-  l: [default]
+  l: [Default]
 - p: [8, 11]
   k: DEL
-  l: [default]
+  l: [Default]
 - p: [9, 11]
   k: TAB
-  l: [default]
+  l: [Default]
 - p: [12, 14]
   k: _
-  l: [default]
+  l: [Default]
 - p: [1, 9]
   k: '{'
-  l: [default]
+  l: [Default]
 - p: [3, 11]
   k: (
-  l: [default]
+  l: [Default]
 - p: [2, 10]
   k: '['
-  l: [default]
+  l: [Default]
 - p: [6, 14]
   k: '}'
-  l: [default]
+  l: [Default]
 - p: [4, 12]
   k: )
-  l: [default]
+  l: [Default]
 - p: [5, 13]
   k: ']'
-  l: [default]
+  l: [Default]
 - p: [0, 8]
   k: <
-  l: [default]
+  l: [Default]
 - p: [7, 15]
   k: '>'
-  l: [default]
+  l: [Default]
 - p: [0, 1]
   k: W
-  l: [default]
+  l: [Default]
 - p: [1, 2]
   k: P
-  l: [default]
+  l: [Default]
 - p: [2, 3]
   k: B
-  l: [default]
+  l: [Default]
 - p: [3, 4]
   k: F
-  l: [default]
+  l: [Default]
 - p: [4, 5]
   k: Q
-  l: [default]
+  l: [Default]
 - p: [5, 6]
   k: ','
-  l: [default]
+  l: [Default]
 - p: [6, 7]
   k: .
-  l: [default]
+  l: [Default]
 - p: [9, 10]
   k: G
-  l: [default]
+  l: [Default]
 - p: [10, 11]
   k: K
-  l: [default]
+  l: [Default]
 - p: [11, 12]
   k: J
-  l: [default]
+  l: [Default]
 - p: [12, 13]
   k: X
-  l: [default]
+  l: [Default]
 - p: [13, 14]
   k: Z
-  l: [default]
+  l: [Default]
 - p: [2, 5]
   k: '&caps_word'
-  l: [default]
+  l: [Default]
 - p: [0, 3]
   k: '!'
-  l: [num]
+  l: [Numbers]
 - p: [4, 7]
   k: )
-  l: [num]
+  l: [Numbers]
 - p: [8, 11]
   k: '1'
-  l: [num]
+  l: [Numbers]
 - p: [12, 15]
   k: '0'
-  l: [num]
+  l: [Numbers]
