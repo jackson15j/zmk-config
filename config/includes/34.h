@@ -37,87 +37,39 @@
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
 
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP, ...) \
+    combo_##NAME { \
+        timeout-ms = <TERM>; \
+        bindings = <BINDINGS>; \
+        key-positions = <KEYPOS>; \
+        layers = <LAYERS>; \
+        require-prior-idle-ms = <QUICKTAP>; \
+        __VA_ARGS__ \
+    };
+
 / {  // https://zmk.dev/docs/features/combos
   combos {
     compatible = "zmk,combos";
-    combo_esc {
-      timeout-ms = <50>;
-      key-positions = <0 1>;
-      layers = <0 1 2 3 4 5 8>;
-      bindings = <&kp ESC>;
-    };
-    combo_del {
-      timeout-ms = <50>;
-      key-positions = <20 21>;
-      layers = <0 1 2 3 4 5>;
-      bindings = <&kp DEL>;
-    };
-    combo_tab {
-      timeout-ms = <50>;
-      key-positions = <21 23>;
-      layers = <0 1 2 3 4 5>;
-      bindings = <&kp TAB>;
-    };
-    combo_underscore {
-      timeout-ms = <50>;
-      key-positions = <26 28>;
-      layers = <0 1 2 3 4 5>;
-      bindings = <&kp UNDER>;
-    };
+  // COMBO(NAME,              BINDINGS,     KEYPOS,  LAYERS,         TERM, QUICKTAP)
+  COMBO(esc,                   &kp ESC,     0 1,     0 1 2 3 4 5 8,  50,  0)
+  COMBO(del,                   &kp DEL,     20 21,   0 1 2 3 4 5,    50,  0)
+  COMBO(tab,                   &kp TAB,     21 23,   0 1 2 3 4 5,    50,  0)
+  COMBO(underscore,            &kp UNDER,   26 28,   0 1 2 3 4 5,    50,  0)
 
-    // HandsDown Gold
-    combo_z {
-      timeout-ms = <50>;
-      key-positions = <20 23>;  /* Should be `0 1` but mimicking `Q`*/
-      layers = <3 4 >;
-      bindings = <&kp Z>;
-    };
-    combo_q {
-      timeout-ms = <50>;
-      key-positions = <26 29>;
-      layers = <3 4>;
-      bindings = <&kp Q>;
-    };
+  // HandsDown Gold
+  /* Should be `0 1` but mimicking `Q`*/
+  COMBO(z,                     &kp Z,       20 23,   3 4,             50,  0)
+  COMBO(q,                     &kp Q,       26 29,   3 4,             50,  0)
 
-    // Brackets - moving these from index+middle finger, to
-    // thumb(right SPC)+finger, as an experiment to see if they are
-    // both: comfortable + avoid accidental rolling.
-    combo_left_curly_bracket {
-      timeout-ms = <50>;
-      key-positions = <6 32>;
-      layers = <0 1 2 3 4 5>;
-      bindings = <&kp LBRC>;  // {
-    };
-    combo_left_parenthesis {
-      timeout-ms = <50>;
-      key-positions = <16 32>;
-      layers = <0 1 2 3 4 5>;
-      bindings = <&kp LPAR>;  // (
-    };
-    combo_left_square_bracket {
-      timeout-ms = <50>;
-      key-positions = <26 32>;
-      layers = <0 1 2 3 4 5>;
-      bindings = <&kp LBKT>;  // [
-    };
-    combo_right_curly_bracket {
-      timeout-ms = <50>;
-      key-positions = <7 32>;
-      layers = <0 1 2 3 4 5>;
-      bindings = <&kp RBRC>;  // }
-    };
-    combo_right_parenthesis {
-      timeout-ms = <50>;
-      key-positions = <17 32>;
-      layers = <0 1 2 3 4 5>;
-      bindings = <&kp RPAR>;  // )
-    };
-    combo_right_square_bracket {
-      timeout-ms = <50>;
-      key-positions = <27 32>;
-      layers = <0 1 2 3 4 5>;
-      bindings = <&kp RBKT>;  // ]
-    };
+  // Brackets - moving these from index+middle finger, to
+  // thumb(right SPC)+finger, as an experiment to see if they are
+  // both: comfortable + avoid accidental rolling.
+  COMBO(left_curly_bracket,    &kp LBRC,    6 32,    0 1 2 3 4 5,     50,  0)
+  COMBO(left_parenthesis,      &kp LPAR,    16 32,   0 1 2 3 4 5,     50,  0)
+  COMBO(left_square_bracket,   &kp LBKT,    26 32,   0 1 2 3 4 5,     50,  0)
+  COMBO(right_curly_bracket,   &kp RBRC,    7 32,    0 1 2 3 4 5,     50,  0)
+  COMBO(right_parenthesis,     &kp RPAR,    17 32,   0 1 2 3 4 5,     50,  0)
+  COMBO(right_square_bracket,  &kp RBKT,    27 32,   0 1 2 3 4 5,     50,  0)
   };
 };
 
