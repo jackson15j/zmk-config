@@ -340,6 +340,13 @@ path.combo {
 <rect rx="6" ry="6" x="322" y="15" width="28" height="26" class="combo"/>
 <text x="336" y="28" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
 </g>
+<g class="combo combopos-25">
+<path d="M560,63 l-66,-14" class="combo"/>
+<path d="M560,63 l66,14" class="combo"/>
+<rect rx="6" ry="6" x="546" y="50" width="28" height="26" class="combo"/>
+<text x="560" y="63" class="combo tap">LCTRL</text>
+<text x="560" y="74" class="combo hold">sticky</text>
+</g>
 </g>
 </g>
 <g transform="translate(30, 283)" class="layer-Navigation">
