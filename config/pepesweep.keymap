@@ -13,191 +13,54 @@
 
 &lt { quick_tap_ms = <200>; };
 
+/// Combo's function to flatten the below structure.
+/// https://github.com/caksoylar/zmk-config/blob/main/config/includes/combos.dtsi
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP, ...) \
+    combo_##NAME { \
+        timeout-ms = <TERM>; \
+        bindings = <BINDINGS>; \
+        key-positions = <KEYPOS>; \
+        layers = <LAYERS>; \
+        require-prior-idle-ms = <QUICKTAP>; \
+        __VA_ARGS__ \
+    };
+
 / {
     combos {
         compatible = "zmk,combos";
-
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 3>;
-            layers = <0>;
-            bindings = <&kp ESC>;
-        };
-
-        combo_del {
-            timeout-ms = <50>;
-            key-positions = <8 11>;
-            layers = <0>;
-            bindings = <&kp DEL>;
-        };
-
-        combo_tab {
-            timeout-ms = <50>;
-            key-positions = <9 11>;
-            layers = <0>;
-            bindings = <&kp TAB>;
-        };
-
-        combo_underscore {
-            timeout-ms = <50>;
-            key-positions = <12 14>;
-            layers = <0>;
-            bindings = <&kp UNDER>;
-        };
-
-        combo_left_curly_bracket {
-            timeout-ms = <50>;
-            key-positions = <1 9>;
-            layers = <0>;
-            bindings = <&kp LBRC>;  // {
-        };
-
-        combo_left_parenthesis {
-            timeout-ms = <50>;
-            key-positions = <3 11>;
-            layers = <0>;
-            bindings = <&kp LPAR>;  // (
-        };
-
-        combo_left_square_bracket {
-            timeout-ms = <50>;
-            key-positions = <2 10>;
-            layers = <0>;
-            bindings = <&kp LBKT>;  // [
-        };
-
-        combo_right_curly_bracket {
-            timeout-ms = <50>;
-            key-positions = <6 14>;
-            layers = <0>;
-            bindings = <&kp RBRC>;  // }
-        };
-
-        combo_right_parenthesis {
-            timeout-ms = <50>;
-            key-positions = <4 12>;
-            layers = <0>;
-            bindings = <&kp RPAR>;  // )
-        };
-
-        combo_right_square_bracket {
-            timeout-ms = <50>;
-            key-positions = <5 13>;
-            layers = <0>;
-            bindings = <&kp RBKT>;  // ]
-        };
-
-        combo_left_angle_brackent {
-            bindings = <&kp LESS_THAN>;
-            layers = <0>;
-            key-positions = <0 8>;
-        };
-
-        combo_right_angle_brackent {
-            bindings = <&kp GREATER_THAN>;
-            layers = <0>;
-            key-positions = <7 15>;
-        };
-
-        combo_w {
-            bindings = <&kp W>;
-            layers = <0>;
-            key-positions = <0 1>;
-        };
-
-        combo_p {
-            bindings = <&kp P>;
-            layers = <0>;
-            key-positions = <1 2>;
-        };
-
-        combo_b {
-            bindings = <&kp B>;
-            layers = <0>;
-            key-positions = <2 3>;
-        };
-
-        combo_f {
-            bindings = <&kp F>;
-            layers = <0>;
-            key-positions = <3 4>;
-        };
-
-        combo_q {
-            bindings = <&kp Q>;
-            layers = <0>;
-            key-positions = <4 5>;
-        };
-
-        combo_comma {
-            bindings = <&kp COMMA>;
-            layers = <0>;
-            key-positions = <5 6>;
-        };
-
-        combo_dot {
-            bindings = <&kp DOT>;
-            layers = <0>;
-            key-positions = <6 7>;
-        };
-
-        combo_g {
-            bindings = <&kp G>;
-            layers = <0>;
-            key-positions = <9 10>;
-        };
-
-        combo_k {
-            bindings = <&kp K>;
-            layers = <0>;
-            key-positions = <10 11>;
-        };
-
-        combo_j {
-            bindings = <&kp J>;
-            layers = <0>;
-            key-positions = <11 12>;
-        };
-
-        combo_x {
-            bindings = <&kp X>;
-            layers = <0>;
-            key-positions = <12 13>;
-        };
-
-        combo_z {
-            bindings = <&kp Z>;
-            layers = <0>;
-            key-positions = <13 14>;
-        };
-
-        combo_caps_word {
-            bindings = <&caps_word>;
-            layers = <0>;
-            key-positions = <2 5>;
-        };
+        // COMBO(NAME,              BINDINGS,          KEYPOS, LAYERS, TERM, QUICKTAP)
+		// Default Layer
+        COMBO(esc,                  &kp ESC,           0 3,    0,      50,  0)
+        COMBO(del,                  &kp DEL,           8 11,   0,      50,  0)
+        COMBO(tab,                  &kp TAB,           9 11,   0,      50,  0)
+        COMBO(underscore,           &kp UNDER,         12 14,  0,      50,  0)
+        COMBO(left_curly_bracket,   &kp LBRC,          1 9,    0,      50,  0)
+        COMBO(left_parenthesis,     &kp LPAR,          3 11,   0,      50,  0)
+        COMBO(left_square_bracket,  &kp LBKT,          2 10,   0,      50,  0)
+        COMBO(right_curly_bracket,  &kp RBRC,          6 14,   0,      50,  0)
+        COMBO(right_parenthesis,    &kp RPAR,          4 12,   0,      50,  0)
+        COMBO(right_square_bracket, &kp RBKT,          5 13,   0,      50,  0)
+        COMBO(left_angle_brackent,  &kp LESS_THAN,     0 8,    0,      50,  0)
+        COMBO(right_angle_brackent, &kp GREATER_THAN,  7 15,   0,      50,  0)
+        COMBO(w,                    &kp W,             0 1,    0,      50,  0)
+        COMBO(p,                    &kp P,             1 2,    0,      50,  0)
+        COMBO(b,                    &kp B,             2 3,    0,      50,  0)
+        COMBO(f,                    &kp F,             3 4,    0,      50,  0)
+        COMBO(q,                    &kp Q,             4 5,    0,      50,  0)
+        COMBO(comma,                &kp COMMA,         5 6,    0,      50,  0)
+        COMBO(dot,                  &kp DOT,           6 7,    0,      50,  0)
+        COMBO(g,                    &kp G,             9 10,   0,      50,  0)
+        COMBO(k,                    &kp K,             10 11,  0,      50,  0)
+        COMBO(j,                    &kp J,             11 12,  0,      50,  0)
+        COMBO(x,                    &kp X,             12 13,  0,      50,  0)
+        COMBO(z,                    &kp Z,             13 14,  0,      50,  0)
+        COMBO(caps_word,           &caps_word,         2 5,    0,      50,  0)
 
         // Num Layer
-        combo_exclamation_mark {
-            bindings = <&kp EXCL>;
-            layers = <2>;
-            key-positions = <0 3>;
-        };
-        combo_right_parathesis_num_lay {
-            bindings = <&kp RPAR>;
-            layers = <2>;
-            key-positions = <4 7>;
-        };
-        combo_1 {
-            bindings = <&kp N1>;
-            layers = <2>;
-            key-positions = <8 11>;
-        };
-        combo_0 {
-            bindings = <&kp N0>;
-            layers = <2>;
-            key-positions = <12 15>;
-        };
+        COMBO(exclamation_mark,         &kp EXCL,      0 3,    2,      50,  0)
+        COMBO(right_parathesis_num_lay, &kp RPAR,      4 7,    2,      50,  0)
+        COMBO(1,                        &kp N1,        8 11,   2,      50,  0)
+        COMBO(0,                        &kp N0,        12 15,  2,      50,  0)
     };
 };
 
