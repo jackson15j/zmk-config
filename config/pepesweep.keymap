@@ -54,7 +54,8 @@
         COMBO(j,                    &kp J,             11 12,  0,      50,  0)
         COMBO(x,                    &kp X,             12 13,  0,      50,  0)
         COMBO(z,                    &kp Z,             13 14,  0,      50,  0)
-        COMBO(caps_word,           &caps_word,         2 5,    0,      50,  0)
+        COMBO(caps_word,            &caps_word,        2 5,    0,      50,  0)
+        COMBO(sticky_ctrl,          &sk LCTRL,         4 7,    0,      50,  0)
 
         // Num Layer
         COMBO(exclamation_mark,         &kp EXCL,      0 3,    2,      50,  0)
