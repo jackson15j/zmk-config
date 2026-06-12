@@ -1,2 +1,6 @@
 Pulled Pepesweep code from: [[https://github.com/XaycMD/pepesweep][Github: XaycMD/pepesweep]]'s renamed
 =piano_norm= shield
+
+Had to use =CONFIG_ZMK_SETTINGS_RESET_ON_START= with the Pepesweep
+flash line to reset the halves and fix pairing. The =system_reset=
+firmware never broke the pairing. See: [[https://zmk.dev/docs/config/settings][ZMK Docs: Persistent Settings]].
