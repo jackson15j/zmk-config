@@ -574,7 +574,7 @@ path.combo {
 </g>
 <g transform="translate(588, 46)" class="key keypos-6">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">DKT</text>
+<text x="0" y="0" class="key tap">&quot;</text>
 </g>
 <g transform="translate(644, 81)" class="key keypos-7">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
