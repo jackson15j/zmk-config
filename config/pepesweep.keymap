@@ -115,7 +115,7 @@
         sym_layer {
             display-name = "Symbols";
             bindings = <
-  &kp EXCL  &kp PLUS  &kp MINUS  &kp NON_US_BSLH     &kp LA(N3)  &kp UNDER  &kp DKT    &kp STAR
+  &kp EXCL  &kp PLUS  &kp MINUS  &kp NON_US_BSLH     &kp LA(N3)  &kp UNDER  &kp DQT    &kp STAR
   &kp AT    &kp FSLH  &kp BSLH   &kp SQT             &kp PIPE2   &kp FSLH   &kp EQUAL  &kp QMARK
                       &trans     &trans              &trans      &trans
             >;
