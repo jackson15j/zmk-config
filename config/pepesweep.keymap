@@ -56,6 +56,7 @@
         COMBO(z,                    &kp Z,             13 14,  0,      50,  0)
         COMBO(caps_word,            &caps_word,        2 5,    0,      50,  0)
         COMBO(sticky_ctrl,          &sk LCTRL,         4 7,    0,      50,  0)
+        COMBO(colon,                &kp COLON,         14 15,  0,      50,  0)
 
         // Num Layer
         COMBO(exclamation_mark,         &kp EXCL,      0 3,    2,      50,  0)
@@ -115,7 +116,7 @@
         sym_layer {
             display-name = "Symbols";
             bindings = <
-  &kp EXCL  &kp PLUS  &kp MINUS  &kp NON_US_BSLH     &kp LA(N3)  &kp UNDER  &kp DQT    &kp STAR
+  &kp EXCL  &kp PLUS  &kp MINUS  &kp NON_US_BSLH     &kp LA(N3)  &kp UNDER  &kp DQT    &kp SEMI
   &kp AT    &kp PIPE  &kp BSLH   &kp SQT             &kp PIPE2   &kp FSLH   &kp EQUAL  &kp QMARK
                       &trans     &trans              &trans      &trans
             >;
