@@ -71,9 +71,9 @@ layers:
   - Alt+3
   - _
   - '"'
-  - '*'
+  - ;
   - '@'
-  - /
+  - '|'
   - \
   - ''''
   - '|'
@@ -183,6 +183,9 @@ combos:
   l: [Default]
 - p: [4, 7]
   k: {t: LCTRL, h: sticky}
+  l: [Default]
+- p: [14, 15]
+  k: ':'
   l: [Default]
 - p: [0, 3]
   k: '!'
