@@ -5,6 +5,8 @@
     pepesweep_layout: pepesweep_layout {
         compatible = "zmk,physical-layout";
         display-name = "Default";
+		// https://zmk.dev/docs/features/low-power-states
+		wakeup-source;
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0  195       0     0     0>
